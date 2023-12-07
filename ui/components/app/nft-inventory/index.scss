@@ -1,0 +1,24 @@
+.nft__inventory {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+
+    .nft-item {
+        margin: 1px;
+        width: 175px;
+        padding: 10px 0;
+        background: white;
+        text-align: center;
+        
+        &.selected{
+            outline: 1px solid #2aa9de;
+            background: #2aa9de0a;
+        }
+
+        img.nft-image {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+diff --git a/node_modules/ethereum-ens-network-map/index.js b/node_modules/ethereum-ens-network-map/index.js
+index f9c9bb7..77e4883 100644
+--- a/node_modules/ethereum-ens-network-map/index.js
++++ b/node_modules/ethereum-ens-network-map/index.js
+@@ -7,4 +7,6 @@ module.exports = {
+   '4': '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
+   // Goerli
+   '5': '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
++  // Theta (tDNS)
++  '361': '0xCccd1b328f9Fc75d87693ebb88B2834fa0dd4885',
+ }

@@ -1,6 +1,6 @@
-const path = require('path')
+const path = require('path');
 
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   module: {
@@ -32,10 +32,15 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.join('node_modules', '@fortawesome', 'fontawesome-free', 'webfonts'),
+          from: path.join(
+            'node_modules',
+            '@fortawesome',
+            'fontawesome-free',
+            'webfonts',
+          ),
           to: path.join('fonts', 'fontawesome'),
         },
       ],
     }),
   ],
-}
+};

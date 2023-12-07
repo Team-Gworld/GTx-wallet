@@ -26,7 +26,7 @@
     "description": "$1 is the number of accounts"
   },
   "connectedAccountsEmptyDescription": {
-    "message": "MetaMask non è connesso a questo sito. Per connetterti ad un sito web3, trova il pulsante di connessione."
+    "message": "GTx non è connesso a questo sito. Per connetterti ad un sito web3, trova il pulsante di connessione."
   },
   "currentAccountNotConnected": {
     "message": "Il tuo account corrente non è connesso"
@@ -77,7 +77,7 @@
     "message": "Connessione..."
   },
   "connectWithMetaMask": {
-    "message": "Connetti con MetaMask"
+    "message": "Connetti con GTx"
   },
   "connectTo": {
     "message": "Connettiti a $1",
@@ -179,7 +179,7 @@
     "message": "Aggiungi Token Suggeriti"
   },
   "addAcquiredTokens": {
-    "message": "Aggiungi i token che hai acquistato usando MetaMask"
+    "message": "Aggiungi i token che hai acquistato usando GTx"
   },
   "alerts": {
     "message": "Avvisi"
@@ -214,11 +214,11 @@
     "message": "Importo:"
   },
   "appDescription": {
-    "message": "Ethereum Browser Extension",
+    "message": "Theta / GNOTE / Ethereum Browser Extension",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "GTx Wallet",
     "description": "The name of the application"
   },
   "approve": {
@@ -236,6 +236,9 @@
   "attemptingConnect": {
     "message": "Tentativo di connessione alla blockchain."
   },
+  "NFTs": {
+    "message": "NFTs"
+  },
   "attemptToCancel": {
     "message": "Tentativo di Annullamento?"
   },
@@ -249,7 +252,7 @@
     "message": "Timer di logout automatico (minuti)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Imposta il tempo di inattività dopo il quale MetaMask fa il log out automaticamente"
+    "message": "Imposta il tempo di inattività dopo il quale GTx fa il log out automaticamente"
   },
   "average": {
     "message": "Media"
@@ -264,7 +267,7 @@
     "message": "Mantieni al sicuro il portafoglio e i fondi eseguendo il backup della frase di recupero."
   },
   "backupApprovalInfo": {
-    "message": "Questo codice è necessario per recuperare il tuo portafoglio nel caso in cui perdi il tuo dispositivo, dimentichi la tua password, debba reinstallare MetaMask o voglia accedere al tuo portafoglio su un altro dispositivo."
+    "message": "Questo codice è necessario per recuperare il tuo portafoglio nel caso in cui perdi il tuo dispositivo, dimentichi la tua password, debba reinstallare GTx o voglia accedere al tuo portafoglio su un altro dispositivo."
   },
   "backupNow": {
     "message": "Esegui il backup ora"
@@ -299,15 +302,12 @@
   },
   "browserNotSupported": {
     "message": "Il tuo Browser non è supportato..."
-  },
-  "builtInCalifornia": {
-    "message": "MetaMask è progettato e realizzato in California."
-  },
+  },  
   "buyWithWyre": {
     "message": "Compra ETH con Wyre"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre ti consente di usare la carta di credito per depositare ETH direttamente nel tuo account MetaMask."
+    "message": "Wyre ti consente di usare la carta di credito per depositare ETH direttamente nel tuo account GTx."
   },
   "buyCoinSwitch": {
     "message": "Compra su CoinSwitch"
@@ -352,7 +352,7 @@
     "message": "Chiudi"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "Devi usare MetaMask con Google Chrome per connettere il tuo Portafoglio Hardware"
+    "message": "Devi usare GTx con Google Chrome per connettere il tuo Portafoglio Hardware"
   },
   "confirm": {
     "message": "Conferma"
@@ -398,6 +398,9 @@
   },
   "connectingToGoerli": {
     "message": "Connessione alla Rete di Test Goerli"
+  },
+  "connectingToThetaMainnet": {
+    "message": "Connessione alla Rete Theta Principale"
   },
   "contacts": {
     "message": "Contatti"
@@ -469,7 +472,7 @@
     "message": "Limite Spesa Personalizzato"
   },
   "dataBackupFoundInfo": {
-    "message": "Alcuni dati sul tuo account sono state salvate durante una installazione precedente di MetaMask. Questi includono le impostazioni, i contatti, e i token. Vuoi ripristinare questi dati?"
+    "message": "Alcuni dati sul tuo account sono state salvate durante una installazione precedente di GTx. Questi includono le impostazioni, i contatti, e i token. Vuoi ripristinare questi dati?"
   },
   "decimalsMustZerotoTen": {
     "message": "Il numero di decimali deve essere almeno 0, e non oltre 36."
@@ -544,16 +547,16 @@
     "message": "Non condividerla mai con nessuno."
   },
   "endOfFlowMessage5": {
-    "message": "Stai attento al phishing! MetaMask non ti chiederà mai spontaneamente la tua frase seed."
+    "message": "Stai attento al phishing! GTx non ti chiederà mai spontaneamente la tua frase seed."
   },
   "endOfFlowMessage6": {
     "message": "Se vorrai fare nuovamente un backup della frase, la puoi trovare in Impostazioni -> Sicurezza & Privacy."
   },
   "endOfFlowMessage7": {
-    "message": "Se hai delle domande o vedi delle attività sospette, manda una mail a support@metamask.io."
+    "message": "Se hai delle domande o vedi delle attività sospette, manda una mail a support@gtx.io."
   },
   "endOfFlowMessage8": {
-    "message": "MetaMask non può recuperare la tua frase seed. Impara di più."
+    "message": "GTx non può recuperare la tua frase seed. Impara di più."
   },
   "endOfFlowMessage9": {
     "message": "Scopri di più."
@@ -603,15 +606,15 @@
     "description": "Displayed error name for debugging purposes. $1 is the error name"
   },
   "errorPageTitle": {
-    "message": "MetaMask ha riscontrato un errore",
+    "message": "GTx ha riscontrato un errore",
     "description": "Title of generic error page"
   },
   "errorPageMessage": {
-    "message": "Prova di nuovo ricaricando la pagina, o contatta il supporto a support@metamask.io (inglese)",
+    "message": "Prova di nuovo ricaricando la pagina, o contatta il supporto a support@gtx.io (inglese)",
     "description": "Message displayed on generic error page in the fullscreen or notification UI"
   },
   "errorPagePopupMessage": {
-    "message": "Prova a chiudere e riaprire il popup, o contatta il supporto a support@metamask.io (inglese)",
+    "message": "Prova a chiudere e riaprire il popup, o contatta il supporto a support@gtx.io (inglese)",
     "description": "Message displayed on generic error page in the popup UI"
   },
   "errorStack": {
@@ -736,7 +739,7 @@
     "message": "Connetti portafoglio hardware"
   },
   "hardwareWalletsMsg": {
-    "message": "Selezione un portafoglio hardware che vuoi utilizzare con MetaMask"
+    "message": "Selezione un portafoglio hardware che vuoi utilizzare con GTx"
   },
   "havingTroubleConnecting": {
     "message": "Problemi di connessione?"
@@ -769,7 +772,7 @@
     "message": "Importa Account"
   },
   "importAccountMsg": {
-    "message": " Gli account importati non saranno associati alla frase seed originariamente creata con MetaMask. Scopri di più sugli account importati "
+    "message": " Gli account importati non saranno associati alla frase seed originariamente creata con GTx. Scopri di più sugli account importati "
   },
   "importAccountSeedPhrase": {
     "message": "Importa un Account con una Frase Seed"
@@ -906,7 +909,7 @@
     "message": "Messaggio"
   },
   "metaMaskConnectStatusParagraphOne": {
-    "message": "Ora hai piu controllo sulle connessioni del tuo account in MetaMask."
+    "message": "Ora hai piu controllo sulle connessioni del tuo account in GTx."
   },
   "metaMaskConnectStatusParagraphTwo": {
     "message": "Il bottone di stato della connessione mostra se il sito che stai visitando è connesso all'account corrente"
@@ -915,10 +918,10 @@
     "message": "Clicca per gestire i tuo account connessi."
   },
   "metamaskDescription": {
-    "message": "MetaMask è una cassaforte sicura per identità su Ethereum."
+    "message": "GTx è una cassaforte sicura per identità su Ethereum."
   },
   "metamaskVersion": {
-    "message": "versione di MetaMask"
+    "message": "versione di GTx"
   },
   "mobileSyncText": {
     "message": "Per favore inserisci la password per confermare che sei te!"
@@ -930,13 +933,13 @@
     "message": "I miei account di portafoglio"
   },
   "myWalletAccountsDescription": {
-    "message": "Tutti gli account creati con MetaMask saranno automaticamente aggiunti a questa sezione."
+    "message": "Tutti gli account creati con GTx saranno automaticamente aggiunti a questa sezione."
   },
   "mustSelectOne": {
     "message": "Devi selezionare almeno un token."
   },
   "needEtherInWallet": {
-    "message": "Per interagire con applicazioni decentralizzate con MetaMask, devi possedere Ether nel tuo portafoglio."
+    "message": "Per interagire con applicazioni decentralizzate con GTx, devi possedere Ether nel tuo portafoglio."
   },
   "needImportFile": {
     "message": "Devi selezionare un file da importare.",
@@ -980,7 +983,7 @@
     "message": "Nuova Rete"
   },
   "newToMetaMask": {
-    "message": "Nuovo su MetaMask?"
+    "message": "Nuovo su GTx?"
   },
   "noAlreadyHaveSeed": {
     "message": "No, ho già una frase seed"
@@ -989,10 +992,10 @@
     "message": "Proteggi le tue chiavi!"
   },
   "protectYourKeysMessage1": {
-    "message": "Stai attento con la tua frase seed - ci sono stati report di siti web che hanno tentato di imitare MetaMask. MetaMask non ti chiederà mai la tua frase seed!"
+    "message": "Stai attento con la tua frase seed - ci sono stati report di siti web che hanno tentato di imitare GTx. GTx non ti chiederà mai la tua frase seed!"
   },
   "protectYourKeysMessage2": {
-    "message": "Tieni la tua frase al sicuro. Se vedi qualcosa di sospetto, o non sei sicuro di un sito web, manda una mail a support@metamask.io"
+    "message": "Tieni la tua frase al sicuro. Se vedi qualcosa di sospetto, o non sei sicuro di un sito web, manda una mail a support@gtx.io"
   },
   "rpcUrl": {
     "message": "Nuovo URL RPC"
@@ -1057,12 +1060,6 @@
   },
   "parameters": {
     "message": "Parametri"
-  },
-  "participateInMetaMetrics": {
-    "message": "Participa in MetaMetrics"
-  },
-  "participateInMetaMetricsDescription": {
-    "message": "Participa in MetaMetrics per aiutarci a rendere MetaMask migliore"
   },
   "password": {
     "message": "Password"
@@ -1315,7 +1312,7 @@
     "message": "Invia Tokens"
   },
   "sentEther": {
-    "message": "ether inviati"
+    "message": "inviati"
   },
   "sentTokens": {
     "message": "tokens inviati"
@@ -1340,7 +1337,7 @@
     "message": "Seleziona un Account"
   },
   "selectAnAccountHelp": {
-    "message": "Selezione l'account da visualizzare in MetaMask"
+    "message": "Selezione l'account da visualizzare in GTx"
   },
   "selectAHigherGasFee": {
     "message": "Seleziona un costo in gas maggiore per accelerare l'elaborazione della transazione.*"
@@ -1422,7 +1419,7 @@
     "message": "Cambia Reti"
   },
   "stateLogFileName": {
-    "message": "Log di Stato di MetaMask"
+    "message": "Log di Stato di GTx"
   },
   "stateLogs": {
     "message": "Log di stato"
@@ -1491,19 +1488,19 @@
     "message": "Sincronizza con dispositivo mobile"
   },
   "syncWithMobileDesc": {
-    "message": "Puoi sincronizzare i tuoi account e le tue informazioni con il tuo dispositivo mobile. Apri l'app di MetaMask, vai su \"Impostazioni\" e tocca \"Sincronizza da Estensione sul Browser\""
+    "message": "Puoi sincronizzare i tuoi account e le tue informazioni con il tuo dispositivo mobile. Apri l'app di GTx, vai su \"Impostazioni\" e tocca \"Sincronizza da Estensione sul Browser\""
   },
   "syncWithMobileDescNewUsers": {
-    "message": "Se hai appena aperto l'app di MetaMask per la prima volta, segui i passaggi sul tuo telefono."
+    "message": "Se hai appena aperto l'app di GTx per la prima volta, segui i passaggi sul tuo telefono."
   },
   "syncWithMobileScanThisCode": {
-    "message": "Scansiona questo codice con l'app di MetaMask"
+    "message": "Scansiona questo codice con l'app di GTx"
   },
   "syncWithMobileBeCareful": {
     "message": "Assicurati che nessun'altro stia guardando al tuo schermo quando scansioni questo codice"
   },
   "syncWithMobileComplete": {
-    "message": "I tuoi dati sono stati sincronizzati con successo. Goditi l'app di MetaMask!"
+    "message": "I tuoi dati sono stati sincronizzati con successo. Goditi l'app di GTx!"
   },
   "terms": {
     "message": "Termini di Uso"
@@ -1599,6 +1596,9 @@
   "transferFrom": {
     "message": "Trasferisci Da"
   },
+  "transferfrom": {
+    "message": "Trasferisci Da"
+  },
   "troubleTokenBalances": {
     "message": "Abbiamo avuto un problema a caricare il bilancio dei tuoi token. Puoi vederlo ",
     "description": "Followed by a link (here) to view token balances"
@@ -1670,7 +1670,7 @@
   "viewAccount": {
     "message": "Vedi Account"
   },
-  "viewinExplorer": {
+  "viewInExplorer": {
     "message": "Vista in Explorer"
   },
   "viewContact": {
@@ -1695,7 +1695,7 @@
     "message": "Bentornato!"
   },
   "welcome": {
-    "message": "Benvenuto nella Beta di MetaMask"
+    "message": "Benvenuto nella Beta di GTx"
   },
   "whatsThis": {
     "message": "Cos'è?"

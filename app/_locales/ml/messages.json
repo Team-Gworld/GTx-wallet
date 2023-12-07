@@ -1,8 +1,4 @@
 {
-  "appName": {
-    "message": "MetaMask",
-    "description": "The name of the application"
-  },
   "reject": {
     "message": "നിരസിക്കുക"
   },
@@ -14,6 +10,10 @@
   },
   "advanced": {
     "message": "നൂതനം"
+  },
+  "appName": {
+    "message": "GTx Wallet",
+    "description": "The name of the application"
   },
   "back": {
     "message": "പിന്നോട്ട്"

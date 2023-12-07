@@ -28,7 +28,7 @@
     "description": "आवेदन का विवरण"
   },
   "appName": {
-    "message": "मेटामास्क/MetaMask",
+    "message": "मेटामास्क/GTx",
     "description": "एप्लिकेशन का नाम"
   },
   "attemptingConnect": {
@@ -45,10 +45,7 @@
   },
   "blockiesIdenticon": {
     "message": "ब्लॉकीज पहचान का उपयोग करें"
-  },
-  "builtInCalifornia": {
-    "message": "मेटामास्क कैलिफ़ोर्निया में डिज़ाइन और बनाया गया है।"
-  },
+  },  
   "buyCoinSwitch": {
     "message": "कॉइनस्विच पर खरीदें"
   },

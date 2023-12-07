@@ -1,4 +1,4 @@
-# MetaMask Philosophy
+# GTx Philosophy
 
 ## Mission
 

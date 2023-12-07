@@ -1,0 +1,30 @@
+diff --git a/node_modules/@babel/parser/lib/index.js b/node_modules/@babel/parser/lib/index.js
+index 68ee00c..562bd30 100644
+--- a/node_modules/@babel/parser/lib/index.js
++++ b/node_modules/@babel/parser/lib/index.js
+@@ -149,12 +149,12 @@ var StandardErrors = {
+   ImportBindingIsString: ({
+     importName
+   }) => `A string literal cannot be used as an imported binding.\n- Did you mean \`import { "${importName}" as foo }\`?`,
+-  ImportCallArgumentTrailingComma: "Trailing comma is disallowed inside import(...) arguments.",
++  ImportCallArgumentTrailingComma: "Trailing comma is disallowed inside `import` function arguments.",
+   ImportCallArity: ({
+     maxArgumentCount
+-  }) => `\`import()\` requires exactly ${maxArgumentCount === 1 ? "one argument" : "one or two arguments"}.`,
+-  ImportCallNotNewExpression: "Cannot use new with import(...).",
+-  ImportCallSpreadArgument: "`...` is not allowed in `import()`.",
++  }) => `\`import\` function requires exactly ${maxArgumentCount === 1 ? "one argument" : "one or two arguments"}.`,
++  ImportCallNotNewExpression: "Cannot use new with `import` function.",
++  ImportCallSpreadArgument: "`...` is not allowed in `import` function.",
+   ImportJSONBindingNotDefault: "A JSON module can only be imported with `default`.",
+   ImportReflectionHasAssertion: "`import module x` cannot have assertions.",
+   ImportReflectionNotBinding: 'Only `import module x from "./module"` is valid.',
+@@ -281,7 +281,7 @@ var StandardErrors = {
+   UnsupportedBind: "Binding should be performed on object property.",
+   UnsupportedDecoratorExport: "A decorated export must export a class declaration.",
+   UnsupportedDefaultExport: "Only expressions, functions or classes are allowed as the `default` export.",
+-  UnsupportedImport: "`import` can only be used in `import()` or `import.meta`.",
++  UnsupportedImport: "`import` can only be used in `import` or `import.meta` functions.",
+   UnsupportedMetaProperty: ({
+     target,
+     onlyValidPropertyName

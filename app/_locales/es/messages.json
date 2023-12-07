@@ -69,17 +69,17 @@
     "message": "Agregar tokens propuestos"
   },
   "addAcquiredTokens": {
-    "message": "Agregar los tokens que has adquirido usando MetaMask"
+    "message": "Agregar los tokens que has adquirido usando GTx"
   },
   "amount": {
     "message": "Cantidad"
   },
   "appDescription": {
-    "message": "Extensión del navegador para Ethereum",
+    "message": "Extensión del navegador para Theta / GNOTE / Ethereum",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "GTx Wallet",
     "description": "The name of the application"
   },
   "approve": {
@@ -94,6 +94,9 @@
   "attemptingConnect": {
     "message": "Intentando conectar a la Blockchain"
   },
+  "NFTs": {
+    "message": "NFTs"
+  },
   "attemptToCancel": {
     "message": "¿Intentar cancelar?"
   },
@@ -107,7 +110,7 @@
     "message": "Temporizador Auto-Cierre (minutos)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Establece el tiempo de inactividad en minutos antes de que MetaMask cierre la sesión automáticamente."
+    "message": "Establece el tiempo de inactividad en minutos antes de que GTx cierre la sesión automáticamente."
   },
   "average": {
     "message": "Promedio"
@@ -132,10 +135,7 @@
   },
   "browserNotSupported": {
     "message": "Tu navegador no está admitido..."
-  },
-  "builtInCalifornia": {
-    "message": "MetaMask fue diseñado y construido en California"
-  },
+  },  
   "buyCoinSwitch": {
     "message": "Comprar en CoinSwitch"
   },
@@ -164,7 +164,7 @@
     "message": "Cerrar"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "Hay que usar MetaMask en Google Chrome para poder conectarse con tu Monedero Físico."
+    "message": "Hay que usar GTx en Google Chrome para poder conectarse con tu Monedero Físico."
   },
   "confirm": {
     "message": "Confirmar"
@@ -193,11 +193,14 @@
   "connectingToMainnet": {
     "message": "Conectando a la red principal de Ethereum (Main Net)"
   },
-  "connectingToRopsten": {
-    "message": "Conectando a la red de test Ropsten"
+  "connectingToThetaMainnet": {
+    "message": "Conectando a la red principal de Theta (Main Net)"
   },
   "connectingToRinkeby": {
     "message": "Conectando a la red de test Rinkeby"
+  },
+  "connectingToRopsten": {
+    "message": "Conectando a la red de test Ropsten"
   },
   "connectingToLocalhost": {
     "message": "Conectando to Localhost 8545"
@@ -314,7 +317,7 @@
     "message": "Editar Contacto"
   },
   "endOfFlowMessage8": {
-    "message": "MetaMask no puede recuperar tu seedphrase. Saber más."
+    "message": "GTx no puede recuperar tu seedphrase. Saber más."
   },
   "endOfFlowMessage9": {
     "message": "Saber más."
@@ -401,7 +404,7 @@
     "message": "Conectarle un monedero físico"
   },
   "hardwareWalletsMsg": {
-    "message": "Seleccionar un monedero físico que quieres usar con MetaMask"
+    "message": "Seleccionar un monedero físico que quieres usar con GTx"
   },
   "havingTroubleConnecting": {
     "message": "¿Tienes problemas para hacer la conexión?"
@@ -430,7 +433,7 @@
     "message": "Importar cuenta"
   },
   "importAccountMsg": {
-    "message": "Las cuentas importadas no serán asociadas con tu cuenta original creada con tu MetaMask. Aprende más acerca de importar cuentas."
+    "message": "Las cuentas importadas no serán asociadas con tu cuenta original creada con tu GTx. Aprende más acerca de importar cuentas."
   },
   "importWallet": {
     "message": "Importar Wallet"
@@ -519,10 +522,10 @@
     "message": "Mensaje"
   },
   "metamaskDescription": {
-    "message": "MetaMask es una identidad segura en Ethereum"
+    "message": "GTx es una identidad segura en Ethereum"
   },
   "metamaskVersion": {
-    "message": "Versión de MetaMask"
+    "message": "Versión de GTx"
   },
   "myAccounts": {
     "message": "Mis cuentas"
@@ -531,7 +534,7 @@
     "message": "Debe seleccionar al menos un (1) token"
   },
   "needEtherInWallet": {
-    "message": "Para interactuar con una aplicación descentralizada usando MetaMask, necesitas tener Ether en tu billetera"
+    "message": "Para interactuar con una aplicación descentralizada usando GTx, necesitas tener Ether en tu billetera"
   },
   "needImportFile": {
     "message": "Debes seleccionar un archivo para importar",
@@ -781,7 +784,7 @@
     "message": "Enviar tokens"
   },
   "sentEther": {
-    "message": "se mandó ether"
+    "message": "se mandó"
   },
   "sentTokens": {
     "message": "se mandaron tokens"
@@ -796,7 +799,7 @@
     "message": "Seleccionar una Cuenta"
   },
   "selectAnAccountHelp": {
-    "message": "Seleccionar la cuenta que quiere ver en MetaMask"
+    "message": "Seleccionar la cuenta que quiere ver en GTx"
   },
   "selectAHigherGasFee": {
     "message": "Seleccione una comisión de gas más elevada para agilizar el procesamiento de tu transacción.*"
@@ -954,6 +957,9 @@
   "transferFrom": {
     "message": "Traspasar de"
   },
+  "transferfrom": {
+    "message": "Traspasar de"
+  },
   "troubleTokenBalances": {
     "message": "Tuvimos problemas para cargar tus saldos de tokens. Puedes verlos ",
     "description": "Followed by a link (here) to view token balances"
@@ -1016,7 +1022,7 @@
     "message": "¡Bienvenido de nuevo!"
   },
   "welcome": {
-    "message": "Bienvenido a MetaMask"
+    "message": "Bienvenido a GTx"
   },
   "yesLetsTry": {
     "message": "Sí, probemos"

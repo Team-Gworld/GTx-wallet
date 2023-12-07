@@ -21,11 +21,11 @@
     "message": "Tutar"
   },
   "appDescription": {
-    "message": "Ethereum Tarayıcı Uzantısı",
+    "message": "Theta / GNOTE / Ethereum Tarayıcı Uzantısı",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "GTx Wallet",
     "description": "The name of the application"
   },
   "approve": {
@@ -48,10 +48,7 @@
   },
   "blockiesIdenticon": {
     "message": "Blockies Identicon kullan"
-  },
-  "builtInCalifornia": {
-    "message": "MetaMask California'da tasarlandı ve yaratıldı"
-  },
+  },  
   "buyCoinSwitch": {
     "message": "CoinSwitch'de satın al"
   },
@@ -81,6 +78,9 @@
   },
   "connectingToRopsten": {
     "message": "Ropsten Test Ağına bağlanıyor"
+  },
+  "connectingToThetaMainnet": {
+    "message": "Main Theta Ağına bağlanıyor"
   },
   "connectingToRinkeby": {
     "message": "Rinkeby Test Ağına bağlanıyor"
@@ -208,7 +208,7 @@
     "message": "Hesap Al"
   },
   "importAccountMsg": {
-    "message": " Alınan hesaplar orjinal kaynakifadenizle yarattığınız MetaMask hesabınızla ilişkilendirilmez. Alınan hesaplar ile ilgili daha fazla bilgi edinin "
+    "message": " Alınan hesaplar orjinal kaynakifadenizle yarattığınız GTx hesabınızla ilişkilendirilmez. Alınan hesaplar ile ilgili daha fazla bilgi edinin "
   },
   "imported": {
     "message": "Alındı",
@@ -276,7 +276,7 @@
     "message": "Mesaj"
   },
   "metamaskDescription": {
-    "message": "MetaMask Ethereum için güvenli bir kimlik kasasıdır."
+    "message": "GTx Ethereum için güvenli bir kimlik kasasıdır."
   },
   "myAccounts": {
     "message": "Hesaplarım"
@@ -285,7 +285,7 @@
     "message": "En az bir jeton seçilmeli"
   },
   "needEtherInWallet": {
-    "message": "MetaMask kullanarak merkezi olamayan uygulamalarla etkileşmek için cüzdanınızda Ether bulunmalıdır."
+    "message": "GTx kullanarak merkezi olamayan uygulamalarla etkileşmek için cüzdanınızda Ether bulunmalıdır."
   },
   "needImportFile": {
     "message": "Almak için bir dosya seçmelisiniz.",
@@ -497,7 +497,7 @@
     "message": "Cüzdan Kaynağı"
   },
   "welcome": {
-    "message": "MetaMask'ya Hoşgeldiniz"
+    "message": "GTx'ya Hoşgeldiniz"
   },
   "yourSigRequested": {
     "message": "İmzanız isteniyor"

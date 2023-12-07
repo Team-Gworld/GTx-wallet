@@ -48,10 +48,7 @@
   },
   "blockiesIdenticon": {
     "message": "ப்ளாக்கிஸ் ஐடென்டிகோன் பயன்பாட்டு"
-  },
-  "builtInCalifornia": {
-    "message": "மேடமஸ்க் வடிவமைக்கப்பட்டு கலிபோர்னியாவில் கட்டப்பட்டுள்ளது."
-  },
+  },  
   "buyCoinSwitch": {
     "message": "நாணயம் ஸ்விட்சில் வாங்கவும்"
   },
@@ -72,6 +69,21 @@
   },
   "confirmPassword": {
     "message": "கடவுச்சொல்லை உறுதிப்படுத்துக"
+  },
+  "connect": {
+    "message": "இணை"
+  },
+  "connectingToKovan": {
+    "message": "கோவன் டெஸ்ட் நெட்வொர்க்குடன் இணைத்தல்"
+  },
+  "connectingToMainnet": {
+    "message": "முக்கிய எதெரியும் நெட்வொர்க் இணைக்கும்"
+  },
+  "connectingToThetaMainnet": {
+    "message": "முக்கிய எதெரியும் நெட்வொர்க் Theta"
+  },
+  "connectingToRinkeby": {
+    "message": "ரிங்கெப்ய டெஸ்ட் நெட்வொர்க்குடன் இணைக்கிறது"
   },
   "continueToCoinSwitch": {
     "message": "நாணயம் மாறாமல் தொடர்க"
@@ -366,17 +378,8 @@
   "ropsten": {
     "message": "ரொப்ஸ்டென் டெஸ்ட் நெட்வொர்க்"
   },
-  "connectingToMainnet": {
-    "message": "முக்கிய எதெரியும் நெட்வொர்க் இணைக்கும்"
-  },
   "connectingToRopsten": {
     "message": "ரொப்ஸ்டென் டெஸ்ட் நெட்வொர்க்குடன் இணைக்கிறது"
-  },
-  "connectingToKovan": {
-    "message": "கோவன் டெஸ்ட் நெட்வொர்க்குடன் இணைத்தல்"
-  },
-  "connectingToRinkeby": {
-    "message": "ரிங்கெப்ய டெஸ்ட் நெட்வொர்க்குடன் இணைக்கிறது"
   },
   "save": {
     "message": "சேமி"
@@ -519,9 +522,6 @@
   },
   "close": {
     "message": "மூடு"
-  },
-  "connect": {
-    "message": "இணை"
   },
   "delete": {
     "message": "நீக்கு"

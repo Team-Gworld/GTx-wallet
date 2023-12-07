@@ -1,13 +1,12 @@
-import EventEmitter from 'events'
-import ObservableStore from 'obs-store'
+import EventEmitter from 'events';
+import { ObservableStore } from '@metamask/obs-store';
 
 export default class AppStateController extends EventEmitter {
-
   /**
    * @constructor
    * @param opts
    */
-  constructor (opts = {}) {
+  constructor(opts = {}) {
     const {
       addUnlockListener,
       isUnlocked,
@@ -15,32 +14,33 @@ export default class AppStateController extends EventEmitter {
       onInactiveTimeout,
       showUnlockRequest,
       preferencesStore,
-    } = opts
-    super()
+    } = opts;
+    super();
 
-    this.onInactiveTimeout = onInactiveTimeout || (() => undefined)
+    this.onInactiveTimeout = onInactiveTimeout || (() => undefined);
     this.store = new ObservableStore({
       timeoutMinutes: 0,
       connectedStatusPopoverHasBeenShown: true,
-      defaultHomeActiveTabName: null, ...initState,
-    })
-    this.timer = null
+      defaultHomeActiveTabName: null,
+      ...initState,
+    });
+    this.timer = null;
 
-    this.isUnlocked = isUnlocked
-    this.waitingForUnlock = []
-    addUnlockListener(this.handleUnlock.bind(this))
+    this.isUnlocked = isUnlocked;
+    this.waitingForUnlock = [];
+    addUnlockListener(this.handleUnlock.bind(this));
 
-    this._showUnlockRequest = showUnlockRequest
+    this._showUnlockRequest = showUnlockRequest;
 
     preferencesStore.subscribe(({ preferences }) => {
-      const currentState = this.store.getState()
+      const currentState = this.store.getState();
       if (currentState.timeoutMinutes !== preferences.autoLockTimeLimit) {
-        this._setInactiveTimeout(preferences.autoLockTimeLimit)
+        this._setInactiveTimeout(preferences.autoLockTimeLimit);
       }
-    })
+    });
 
-    const { preferences } = preferencesStore.getState()
-    this._setInactiveTimeout(preferences.autoLockTimeLimit)
+    const { preferences } = preferencesStore.getState();
+    this._setInactiveTimeout(preferences.autoLockTimeLimit);
   }
 
   /**
@@ -52,14 +52,14 @@ export default class AppStateController extends EventEmitter {
    * @returns {Promise<void>} A promise that resolves when the extension is
    * unlocked, or immediately if the extension is already unlocked.
    */
-  getUnlockPromise (shouldShowUnlockRequest) {
+  getUnlockPromise(shouldShowUnlockRequest) {
     return new Promise((resolve) => {
       if (this.isUnlocked()) {
-        resolve()
+        resolve();
       } else {
-        this.waitForUnlock(resolve, shouldShowUnlockRequest)
+        this.waitForUnlock(resolve, shouldShowUnlockRequest);
       }
-    })
+    });
   }
 
   /**
@@ -71,23 +71,23 @@ export default class AppStateController extends EventEmitter {
    * @param {boolean} shouldShowUnlockRequest - Whether the extension notification
    * popup should be opened.
    */
-  waitForUnlock (resolve, shouldShowUnlockRequest) {
-    this.waitingForUnlock.push({ resolve })
-    this.emit('updateBadge')
+  waitForUnlock(resolve, shouldShowUnlockRequest) {
+    this.waitingForUnlock.push({ resolve });
+    this.emit('updateBadge');
     if (shouldShowUnlockRequest) {
-      this._showUnlockRequest()
+      this._showUnlockRequest();
     }
   }
 
   /**
    * Drains the waitingForUnlock queue, resolving all the related Promises.
    */
-  handleUnlock () {
+  handleUnlock() {
     if (this.waitingForUnlock.length > 0) {
       while (this.waitingForUnlock.length > 0) {
-        this.waitingForUnlock.shift().resolve()
+        this.waitingForUnlock.shift().resolve();
       }
-      this.emit('updateBadge')
+      this.emit('updateBadge');
     }
   }
 
@@ -95,27 +95,37 @@ export default class AppStateController extends EventEmitter {
    * Sets the default home tab
    * @param {string} [defaultHomeActiveTabName] - the tab name
    */
-  setDefaultHomeActiveTabName (defaultHomeActiveTabName) {
+  setDefaultHomeActiveTabName(defaultHomeActiveTabName) {
     this.store.updateState({
       defaultHomeActiveTabName,
-    })
+    });
   }
 
   /**
    * Record that the user has seen the connected status info popover
    */
-  setConnectedStatusPopoverHasBeenShown () {
+  setConnectedStatusPopoverHasBeenShown() {
     this.store.updateState({
       connectedStatusPopoverHasBeenShown: true,
-    })
+    });
+  }
+
+  /**
+   *  Set which, if any, NFT has been selected by the user
+   * @param {object} nft the NFT selected by the user
+   */
+  setSelectedNFT(nft) {
+    this.store.updateState({
+      selectedNFT: nft,
+    });
   }
 
   /**
    * Sets the last active time to the current time
    * @returns {void}
    */
-  setLastActiveTime () {
-    this._resetTimer()
+  setLastActiveTime() {
+    this._resetTimer();
   }
 
   /**
@@ -124,12 +134,12 @@ export default class AppStateController extends EventEmitter {
    * @returns {void}
    * @private
    */
-  _setInactiveTimeout (timeoutMinutes) {
+  _setInactiveTimeout(timeoutMinutes) {
     this.store.updateState({
       timeoutMinutes,
-    })
+    });
 
-    this._resetTimer()
+    this._resetTimer();
   }
 
   /**
@@ -141,17 +151,20 @@ export default class AppStateController extends EventEmitter {
    * @returns {void}
    * @private
    */
-  _resetTimer () {
-    const { timeoutMinutes } = this.store.getState()
+  _resetTimer() {
+    const { timeoutMinutes } = this.store.getState();
 
     if (this.timer) {
-      clearTimeout(this.timer)
+      clearTimeout(this.timer);
     }
 
     if (!timeoutMinutes) {
-      return
+      return;
     }
 
-    this.timer = setTimeout(() => this.onInactiveTimeout(), timeoutMinutes * 60 * 1000)
+    this.timer = setTimeout(
+      () => this.onInactiveTimeout(),
+      timeoutMinutes * 60 * 1000,
+    );
   }
 }

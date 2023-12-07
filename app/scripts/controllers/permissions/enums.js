@@ -1,38 +1,35 @@
+export const WALLET_PREFIX = 'wallet_';
 
-export const WALLET_PREFIX = 'wallet_'
+export const HISTORY_STORE_KEY = 'permissionsHistory';
 
-export const HISTORY_STORE_KEY = 'permissionsHistory'
+export const LOG_STORE_KEY = 'permissionsLog';
 
-export const LOG_STORE_KEY = 'permissionsLog'
+export const METADATA_STORE_KEY = 'domainMetadata';
 
-export const METADATA_STORE_KEY = 'domainMetadata'
-
-export const METADATA_CACHE_MAX_SIZE = 100
+export const METADATA_CACHE_MAX_SIZE = 100;
 
 export const CAVEAT_NAMES = {
   exposedAccounts: 'exposedAccounts',
   primaryAccountOnly: 'primaryAccountOnly',
-}
+};
 
 export const CAVEAT_TYPES = {
   limitResponseLength: 'limitResponseLength',
   filterResponse: 'filterResponse',
-}
+};
 
 export const NOTIFICATION_NAMES = {
   accountsChanged: 'wallet_accountsChanged',
-}
+};
 
-export const LOG_IGNORE_METHODS = [
-  'wallet_sendDomainMetadata',
-]
+export const LOG_IGNORE_METHODS = ['wallet_sendDomainMetadata', 'metamask_sendDomainMetadata'];
 
 export const LOG_METHOD_TYPES = {
   restricted: 'restricted',
   internal: 'internal',
-}
+};
 
-export const LOG_LIMIT = 100
+export const LOG_LIMIT = 100;
 
 export const SAFE_METHODS = [
   'web3_sha3',
@@ -85,8 +82,9 @@ export const SAFE_METHODS = [
   'eth_submitWork',
   'eth_syncing',
   'eth_uninstallFilter',
+  'metamask_getProviderState',
   'metamask_watchAsset',
   'wallet_watchAsset',
   'eth_getEncryptionPublicKey',
   'eth_decrypt',
-]
+];

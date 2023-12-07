@@ -1,0 +1,155 @@
+.list-item {
+  width: 100%;
+  min-height: 86px;
+  margin: 0;
+  padding: 24px 16px;
+
+  @include Paragraph;
+
+  border-top: 1px solid $mercury;
+  border-bottom: 1px solid $mercury;
+  color: $Black-100;
+  display: grid;
+  grid-template-columns: 0fr repeat(11, 1fr);
+  grid-template-areas:
+    'icon head     head     head     head     head     head     head     right right right right'
+    'icon sub      sub      sub      sub      sub      sub      sub      right right right right'
+    '.    actions  actions  actions  actions  actions  actions  actions  right right right right';
+  align-items: start;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $Grey-000;
+  }
+
+  &__icon {
+    grid-area: icon;
+    align-self: center;
+
+    > * {
+      margin: 0 16px 0 0;
+    }
+  }
+
+  &__actions {
+    grid-area: actions;
+  }
+
+  &__heading {
+    grid-area: head;
+    font-size: 16px;
+    line-height: 160%;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    > h2 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &-wrap {
+      display: inline-block;
+      margin-left: 8px;
+    }
+  }
+
+  &__subheading {
+    grid-area: sub;
+    font-size: 12px;
+    line-height: 14px;
+    color: $Grey-500;
+    margin-top: 4px;
+    // all direct descendants should be truncated with ellipses
+    // allows flexibility in consuming components to use h3/other tag
+    > * {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__mid-content {
+    grid-area: mid;
+    font-size: 12px;
+    color: $Grey-500;
+  }
+
+  &__right-content {
+    grid-area: right;
+    text-align: right;
+    align-items: flex-end;
+  }
+
+  @media (max-width: 575px) {
+    &__mid-content {
+      display: none;
+    }
+  }
+
+  @media (min-width: 576px) {
+    grid-template-areas:
+      'icon head     head     head     head     mid mid mid mid right right right'
+      'icon sub      sub      sub      sub      mid mid mid mid right right right'
+      '.    actions  actions  actions  actions  mid mid mid mid right right right';
+  }
+}
+
+.stakes {
+  .list-item{
+    background: transparent;
+    border-bottom: none;
+    padding: 24px 16px;
+    cursor: default;
+
+    &__subheading {
+      font-size: 12px;
+    }
+  }
+  .asset-list-item__token-button{
+    cursor: default;
+  }
+  .transaction-list__empty-text{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .icon-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: unset;    
+  
+    @include H7;
+  
+    font-size: 13px;
+    cursor: pointer;
+    color: $Blue-500;
+  
+    &__circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 22px;
+      width: 22px;
+      background: #037dd6;
+      border-radius: 18px;
+      margin-top: 6px;
+      margin-bottom: 5px;
+    }
+  
+    &--disabled {
+      opacity: 0.3;
+      cursor: auto;
+    }
+  }
+  .wrap-overview__button{
+    float: right;
+    padding-right: 0;
+  }
+}

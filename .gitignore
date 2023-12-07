@@ -13,8 +13,7 @@ package
 .idea
 .vscode
 .sublime-project
-
-*.bak
+*.code-workspace
 
 # VIM
 *.swp
@@ -36,12 +35,17 @@ test-artifacts
 test-builds
 build-artifacts
 
-#ignore css output and sourcemaps
-ui/app/css/output/
-
-notes.txt
+ui/css/output/
 
 .coveralls.yml
 .nyc_output
 
-.metamaskrc
+*.privatenet.*
+*.dev
+.gtxwalletrc
+
+notes/
+
+bak/
+*.bak
+*.tgz

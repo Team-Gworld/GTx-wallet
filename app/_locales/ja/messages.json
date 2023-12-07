@@ -69,17 +69,17 @@
     "message": "推奨トークンを追加"
   },
   "addAcquiredTokens": {
-    "message": "MetaMaskで獲得したトークンを追加する"
+    "message": "GTxで獲得したトークンを追加する"
   },
   "amount": {
     "message": "金額"
   },
   "appDescription": {
-    "message": "Ethereumのブラウザ・エクステンション",
+    "message": "Theta / GNOTE / Ethereumのブラウザ・エクステンション",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "GTx Wallet",
     "description": "The name of the application"
   },
   "approve": {
@@ -94,6 +94,9 @@
   "attemptingConnect": {
     "message": "ブロックチェーンに接続中"
   },
+  "NFTs": {
+    "message": "NFTs"
+  },
   "attemptToCancel": {
     "message": "キャンセルを試みますか？"
   },
@@ -107,7 +110,7 @@
     "message": "自動ログアウト(分)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "MetaMaskが自動的にログアウトするまでのアイドル時間を分単位で設定します。"
+    "message": "GTxが自動的にログアウトするまでのアイドル時間を分単位で設定します。"
   },
   "average": {
     "message": "平均"
@@ -185,13 +188,19 @@
     "message": "Etherを直接入金"
   },
   "directDepositEtherExplainer": {
-    "message": "既にEtherをお持ちなら、MetaMaskの新しいウォレットにEtherを送信することができます。"
+    "message": "既にEtherをお持ちなら、GTxの新しいウォレットにEtherを送信することができます。"
   },
   "done": {
     "message": "完了"
   },
   "edit": {
     "message": "編集"
+  },
+  "connectingToThetaMainnet": {
+    "message": "Theta メインネットへの接続"
+  },
+  "connectingToRinkeby": {
+    "message": "Rinkeby テスト ネットワークへの接続"
   },
   "endOfFlowMessage10": {
     "message": "全て完了"
@@ -253,7 +262,7 @@
     "message": "アカウントのインポート"
   },
   "importAccountMsg": {
-    "message": "追加したアカウントはMetaMaskのアカウントパスフレーズとは関連付けられません。インポートしたアカウントについての詳細は"
+    "message": "追加したアカウントはGTxのアカウントパスフレーズとは関連付けられません。インポートしたアカウントについての詳細は"
   },
   "imported": {
     "message": "インポート完了",
@@ -315,7 +324,7 @@
     "message": "一つ以上のトークンを選択してください。"
   },
   "needEtherInWallet": {
-    "message": "MetaMaskで分散型アプリケーションを使用するためには、このウォレットにEtherが必要です。"
+    "message": "GTxで分散型アプリケーションを使用するためには、このウォレットにEtherが必要です。"
   },
   "needImportFile": {
     "message": "インポートするファイルを選択してください。",
@@ -488,7 +497,7 @@
     "message": "おかえりなさい!"
   },
   "welcome": {
-    "message": "MetaMask ベータ版へようこそ!"
+    "message": "GTx ベータ版へようこそ!"
   },
   "yourSigRequested": {
     "message": "あなたの署名がリクエストされています。"

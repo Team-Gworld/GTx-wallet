@@ -72,17 +72,17 @@
     "message": "Afegir Fitxes Suggerides"
   },
   "addAcquiredTokens": {
-    "message": "Afegeix les fitxes que has adquirit fent servir MetaMask"
+    "message": "Afegeix les fitxes que has adquirit fent servir GTx"
   },
   "amount": {
     "message": "Quantitat"
   },
   "appDescription": {
-    "message": "Un Moneder Ethereum al teu Navegador",
+    "message": "Un Moneder Theta / GNOTE / Ethereum al teu Navegador",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "GTx Wallet",
     "description": "The name of the application"
   },
   "approve": {
@@ -110,7 +110,7 @@
     "message": "Temporitzador de tancament de sessió automàtic (minuts)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Configura el temps de repòs com minuts abans que MetaMask tanqui la sessió automàticament"
+    "message": "Configura el temps de repòs com minuts abans que GTx tanqui la sessió automàticament"
   },
   "average": {
     "message": "Mitjana"
@@ -125,7 +125,7 @@
     "message": "Fes una còpia de seguretat del teu codi Secret de Recuperació per mantenir el teu moneder i els teus fons segurs."
   },
   "backupApprovalInfo": {
-    "message": "Aquest codi secret es requereix per recuperar el teu moneder en cas que perdis el dispositiu, oblidis la teva contrasenya, hagis de reinstal·lar MetaMask, o vulguis accedir al teu moneder des d'un altre dispositiu."
+    "message": "Aquest codi secret es requereix per recuperar el teu moneder en cas que perdis el dispositiu, oblidis la teva contrasenya, hagis de reinstal·lar GTx, o vulguis accedir al teu moneder des d'un altre dispositiu."
   },
   "backupNow": {
     "message": "Fer còpia de seguretat ara"
@@ -151,15 +151,12 @@
   },
   "browserNotSupported": {
     "message": "El teu navegador no és suportat..."
-  },
-  "builtInCalifornia": {
-    "message": "MetaMask ha estat dissenyat i desenvolupat a Califòrnia."
-  },
+  },  
   "buyWithWyre": {
     "message": "Compra ETH amb Wyre"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre et permet utilitzar una targeta de crèdit per dipositar ETH directe al teu compte MetaMask."
+    "message": "Wyre et permet utilitzar una targeta de crèdit per dipositar ETH directe al teu compte GTx."
   },
   "buyCoinSwitch": {
     "message": "Comprar a CoinSwitch"
@@ -201,7 +198,7 @@
     "message": "Tanca"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "Necessites fer servir MetaMask amb Google Chrome per a connectar-te al teu Moneder Hardware."
+    "message": "Necessites fer servir GTx amb Google Chrome per a connectar-te al teu Moneder Hardware."
   },
   "confirm": {
     "message": "Confirma"
@@ -235,6 +232,9 @@
   },
   "connectingToRopsten": {
     "message": "Connectant a la xarxa de test Ropsten"
+  },
+  "connectingToThetaMainnet": {
+    "message": "Connectant a Xarxa Principal Theta"
   },
   "connectingToRinkeby": {
     "message": "Connectant a la Xarxa de Prova Rinkeby"
@@ -369,13 +369,13 @@
     "message": "No comparteixis mai la frase amb ningú."
   },
   "endOfFlowMessage5": {
-    "message": "Estigues atent amb el phishing! MetaMask no et preguntarà mai espontàniament la teva frase de recuperació."
+    "message": "Estigues atent amb el phishing! GTx no et preguntarà mai espontàniament la teva frase de recuperació."
   },
   "endOfFlowMessage6": {
     "message": "Si necessites fer una còpia de seguretat de la teva frase de recuperació una altra vegada, la pots trobar a Configuració-> Seguretat."
   },
   "endOfFlowMessage7": {
-    "message": "Si mai tens preguntes o veus alguna cosa sospitosa, envia un correu a support@metamask.io."
+    "message": "Si mai tens preguntes o veus alguna cosa sospitosa, envia un correu a support@gtx.io."
   },
   "endOfFlowMessage8": {
     "message": "MetaMask no pot recuperar la teva seedphrase. Descobreix per què."
@@ -488,7 +488,7 @@
     "message": "Connectar un moneder hardware"
   },
   "hardwareWalletsMsg": {
-    "message": "Selecciona una cartera de hardware que t'agradaria utilizar amb MetaMask"
+    "message": "Selecciona una cartera de hardware que t'agradaria utilizar amb GTx"
   },
   "havingTroubleConnecting": {
     "message": "Problemes per connectar?"
@@ -517,7 +517,7 @@
     "message": "Importa compte"
   },
   "importAccountMsg": {
-    "message": "Els comptes importats no s'associaran amb la teva frase de recuperació creada originalment a MetaMask. Aprèn més sobre els comptes importats"
+    "message": "Els comptes importats no s'associaran amb la teva frase de recuperació creada originalment a GTx. Aprèn més sobre els comptes importats"
   },
   "importAccountSeedPhrase": {
     "message": "Importa un Compte amb Phrase de Recuperació"
@@ -630,7 +630,7 @@
     "message": "Conectant-te a Ethereum i la web descentralitzada."
   },
   "metamaskVersion": {
-    "message": "Versió MetaMask"
+    "message": "Versió GTx"
   },
   "mobileSyncText": {
     "message": "Si us plau, introdueix la teva contrasenya per confirmar que ets tu!"
@@ -642,13 +642,13 @@
     "message": "Els meus Comptes de Moneder"
   },
   "myWalletAccountsDescription": {
-    "message": "Tots els teus comptes creats a MetaMask s'afegiran automàticament a aquesta secció."
+    "message": "Tots els teus comptes creats a GTx s'afegiran automàticament a aquesta secció."
   },
   "mustSelectOne": {
     "message": "Has de seleccionar "
   },
   "needEtherInWallet": {
-    "message": "Per a interactuar amb aplicacions descentralitzades fent servir MetaMask, necessitaràs Ether al teu moneder."
+    "message": "Per a interactuar amb aplicacions descentralitzades fent servir GTx, necessitaràs Ether al teu moneder."
   },
   "needImportFile": {
     "message": "Has de seleccionar un arxiu per a importar.",
@@ -692,7 +692,7 @@
     "message": "Nova Xarxa"
   },
   "newToMetaMask": {
-    "message": "Nou a MetaMask?"
+    "message": "Nou a GTx?"
   },
   "noAlreadyHaveSeed": {
     "message": "No, ja tinc una frase de recuperació."
@@ -701,10 +701,10 @@
     "message": "Protegeix les Teves Claus!"
   },
   "protectYourKeysMessage1": {
-    "message": "Vigila amb la teva frase de recuperació  —s'han documentat casos de llocs web que intenten imitar MetaMask. MetaMask mai no et demanarà la frase de recuperació!"
+    "message": "Vigila amb la teva frase de recuperació  —s'han documentat casos de llocs web que intenten imitar GTx. GTx mai no et demanarà la frase de recuperació!"
   },
   "protectYourKeysMessage2": {
-    "message": "Mantingues segura la teva frase. Si veus alguna cosa sospitosa, o no estàs segur d'un lloc web, envia un correu a support@metamask.io"
+    "message": "Mantingues segura la teva frase. Si veus alguna cosa sospitosa, o no estàs segur d'un lloc web, envia un correu a support@gtx.io"
   },
   "rpcUrl": {
     "message": "Nova URL de RPC"
@@ -753,12 +753,6 @@
   },
   "parameters": {
     "message": "Paràmetres"
-  },
-  "participateInMetaMetrics": {
-    "message": "Participar a MetaMetrics"
-  },
-  "participateInMetaMetricsDescription": {
-    "message": "Participa a MetaMetrics per ajudar-nos a fer MetaMask millor"
   },
   "password": {
     "message": "Contrasenya"
@@ -964,7 +958,7 @@
     "message": "Enviar Fitxes"
   },
   "sentEther": {
-    "message": "envia ether"
+    "message": "envia"
   },
   "sentTokens": {
     "message": "fitxes enviades"
@@ -979,7 +973,7 @@
     "message": "Selecciona un Compte"
   },
   "selectAnAccountHelp": {
-    "message": "Selecciona el compte que vols veure a MetaMask"
+    "message": "Selecciona el compte que vols veure a GTx"
   },
   "selectAHigherGasFee": {
     "message": "Selecciona un preu de gas més alt per a accelerar el procès de la teva transacció.*"
@@ -1096,16 +1090,16 @@
     "message": "Pots sincronitzar els teus comptes i la teva informació amb el teu dispositiu mòbil. Obre l'app mòbil de MetaTask, ves a \"Configuració\" i \"Sincronitzar desde l"
   },
   "syncWithMobileDescNewUsers": {
-    "message": "Si acabes d'obrir l'app mòbil MetaMask per primer cop, tan sols has de seguir els passos del teu telèfon."
+    "message": "Si acabes d'obrir l'app mòbil GTx per primer cop, tan sols has de seguir els passos del teu telèfon."
   },
   "syncWithMobileScanThisCode": {
-    "message": "Escaneja aquest codi amb la teva aplicació mòbil de MetaMask"
+    "message": "Escaneja aquest codi amb la teva aplicació mòbil de GTx"
   },
   "syncWithMobileBeCareful": {
     "message": "Assegura't que no hi ha ningú mirant la teva pantalla quan escanegis aquest codi"
   },
   "syncWithMobileComplete": {
-    "message": "Les teves dades s'han sincronitzat amb èxit. Disfruta de l'app mòbil de MetaMask!"
+    "message": "Les teves dades s'han sincronitzat amb èxit. Disfruta de l'app mòbil de GTx!"
   },
   "terms": {
     "message": "Condicions d'ús"
@@ -1179,6 +1173,9 @@
   "transferFrom": {
     "message": "Transferir Des de"
   },
+  "transferfrom": {
+    "message": "Transferir Des de"
+  },
   "troubleTokenBalances": {
     "message": "Hem tingut problemes en carregar el teu saldo de fitxes. Els pots veure",
     "description": "Followed by a link (here) to view token balances"
@@ -1187,7 +1184,7 @@
     "message": "Torna-ho a provar"
   },
   "typePassword": {
-    "message": "Tecleja la teva contrasenya de MetaMask"
+    "message": "Tecleja la teva contrasenya de GTx"
   },
   "unapproved": {
     "message": "Pendent d'aprovació"
@@ -1231,7 +1228,7 @@
   "viewAccount": {
     "message": "Mostra el compte"
   },
-  "viewinExplorer": {
+  "viewInExplorer": {
     "message": "Mostra a Explorer"
   },
   "viewContact": {
@@ -1253,7 +1250,7 @@
     "message": "Benvingut de nou!"
   },
   "welcome": {
-    "message": "Benvingut a MetaMask"
+    "message": "Benvingut a GTx"
   },
   "writePhrase": {
     "message": "Escriu aquesta frase en un tros de paper i guarda'l en un lloc segur. Si vols més seguretat encara, escriu-la en diversos trossos de paper i guarda'ls cadascun a 2 - 3 llocs diferents."

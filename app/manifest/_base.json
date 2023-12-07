@@ -1,17 +1,17 @@
 {
   "name": "__MSG_appName__",
   "short_name": "__MSG_appName__",
-  "version": "8.0.9",
+  "version": "1.0.0",
   "manifest_version": 2,
-  "author": "https://metamask.io",
+  "author": "https://GTx.io",
   "description": "__MSG_appDescription__",
   "commands": {
     "_execute_browser_action": {
       "suggested_key": {
-        "windows": "Alt+Shift+M",
-        "mac": "Alt+Shift+M",
-        "chromeos": "Alt+Shift+M",
-        "linux": "Alt+Shift+M"
+        "windows": "Alt+Shift+G",
+        "mac": "Alt+Shift+G",
+        "chromeos": "Alt+Shift+G",
+        "linux": "Alt+Shift+G"
       }
     }
   },
@@ -27,6 +27,10 @@
   "default_locale": "en",
   "background": {
     "scripts": [
+      "globalthis.js",
+      "initSentry.js",
+      "lockdown.js",
+      "runLockdown.js",
       "bg-libs.js",
       "background.js"
     ],
@@ -42,17 +46,16 @@
       "128": "images/icon-128.png",
       "512": "images/icon-512.png"
     },
-    "default_title": "MetaMask",
+    "default_title": "GTx Wallet",
     "default_popup": "popup.html"
   },
   "content_scripts": [
     {
-      "matches": [
-        "file://*/*",
-        "http://*/*",
-        "https://*/*"
-      ],
+      "matches": ["file://*/*", "http://*/*", "https://*/*"],
       "js": [
+        "globalthis.js",
+        "lockdown.js",
+        "runLockdown.js",
         "contentscript.js"
       ],
       "run_at": "document_start",
@@ -73,6 +76,8 @@
     "clipboardWrite",
     "http://localhost:8545/",
     "https://*.infura.io/",
+    "https://*.thetatoken.org/",
+    "https://gtx.io/",
     "activeTab",
     "webRequest",
     "*://*.eth/",
@@ -84,7 +89,8 @@
   ],
   "externally_connectable": {
     "matches": [
-      "https://metamask.io/*"
+      "https://metamask.io/*",
+      "https://gtx.io/*"
     ],
     "ids": [
       "*"

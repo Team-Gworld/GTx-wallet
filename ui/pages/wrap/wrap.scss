@@ -1,0 +1,149 @@
+.wrap {
+  &__header {
+    position: relative;
+    background-color: $Grey-000;
+    border-bottom: none;
+    padding: 14px 0 14px 0;
+
+    .page-container__title {
+      @include H4;
+
+      text-align: center;
+    }
+
+    .page-container__header-close-text {
+      font-size: 1rem;
+      line-height: 1.1875rem;
+      position: absolute;
+      right: 1rem;
+      top: 6px;
+      width: min-content;
+    }
+  }
+
+  &__dialog {
+    margin: 1rem;
+    cursor: pointer;
+  }
+
+  &__error-dialog {
+    margin: 1rem;
+  }
+
+  &__to-row {
+    margin: 0;
+    padding: 0.5rem;
+    flex: 0 0 auto;
+    background-color: $BG;
+    border-bottom: 1px solid $alto;
+  }
+
+  &__select-recipient-wrapper {
+    @extend %col-nowrap;
+
+    flex: 1 1 auto;
+    height: 0;
+
+    &__list {
+      overflow-y: auto;
+
+      &__link {
+        @extend %row-nowrap;
+
+        padding: 1rem;
+        font-size: 1rem;
+        border-bottom: 1px solid $alto;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      &__back-caret {
+        @extend %bg-contain;
+
+        display: block;
+        background-image: url('/images/caret-left.svg');
+        width: 18px;
+        height: 18px;
+        margin-right: 0.5rem;
+
+        [dir='rtl'] & {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &__recent-group-wrapper {
+      @extend %col-nowrap;
+
+      &__load-more {
+        font-size: 0.75rem;
+        line-height: 1.0625rem;
+        padding: 0.5rem;
+        text-align: center;
+        border-bottom: 1px solid $alto;
+        justify-content: flex-start;
+      }
+    }
+
+    &__group {
+      @extend %col-nowrap;
+    }
+
+    &__group-label {
+      @include H8;
+
+      background-color: $BG;
+      color: $Grey-600;
+      line-height: 0.875rem;
+      padding: 0.5rem 1rem;
+      border-bottom: 1px solid $alto;
+
+      &:first-of-type {
+        border-top: 1px solid $alto;
+      }
+    }
+
+    &__group-item,
+    &__group-item--selected {
+      @extend %row-nowrap;
+
+      padding: 0.75rem 1rem;
+      align-items: center;
+      border-bottom: 1px solid $alto;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba($alto, 0.2);
+      }
+
+      .identicon {
+        margin-right: 1rem;
+        flex: 0 0 auto;
+      }
+
+      &__content {
+        @extend %col-nowrap;
+
+        flex: 1 1 auto;
+        width: 0;
+      }
+
+      &__title {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        color: $black;
+      }
+
+      &__subtitle {
+        @include H8;
+
+        color: $Grey-500;
+      }
+    }
+
+    &__group-item--selected {
+      border: 2px solid #2b7cd6;
+      border-radius: 8px;
+    }
+  }
+}

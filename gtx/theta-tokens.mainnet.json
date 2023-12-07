@@ -1,0 +1,109 @@
+{
+    "0x4Dc08B15ea0e10B96c41Aec22fAB934bA15C983e": {
+        "address": "0x4Dc08B15ea0e10B96c41Aec22fAB934bA15C983e",
+        "name": "Wrapped TFUEL",
+        "logo": "tfuel-wrapped.svg",
+        "erc20": true,
+        "symbol": "WTFUEL",
+        "decimals": 18,
+        "chainId": "0x169",
+        "tnt20": true,
+        "autoAdd": false
+    },
+    "0xAf537FB7E4c77C97403De94Ce141b7EdB9F7fCf0": {
+        "address": "0xAf537FB7E4c77C97403De94Ce141b7EdB9F7fCf0",
+        "name": "Wrapped THETA",
+        "logo": "theta-wrapped.svg",
+        "erc20": true,
+        "symbol": "WTHETA",
+        "decimals": 18,
+        "chainId": "0x169",
+        "tnt20": true,
+        "autoAdd": true
+    },
+    "0x3Ca3fEFA944753b43c751336A5dF531bDD6598B6": {
+        "address": "0x3Ca3fEFA944753b43c751336A5dF531bDD6598B6",
+        "name": "USD Coin",
+        "logo": "usdc.svg",
+        "erc20": true,
+        "symbol": "USDC",
+        "decimals": 6,
+        "chainId": "0x169",
+        "tnt20": true,
+        "autoAdd": false
+    },
+    "0xf64FA5155D8cc578D473A21FB67507DDCbB80D21": {
+        "address": "0xf64FA5155D8cc578D473A21FB67507DDCbB80D21",
+        "name": "Wrapped BTC",
+        "logo": "wbtc.svg",
+        "erc20": true,
+        "symbol": "WBTC",
+        "decimals": 8,
+        "chainId": "0x169",
+        "tnt20": true,
+        "autoAdd": false
+    },
+    "0x3674D64AaB971aB974B2035667a4B3d09B5ec2B3": {
+        "address": "0x3674D64AaB971aB974B2035667a4B3d09B5ec2B3",
+        "name": "Wrapped Ether",
+        "logo": "weth.png",
+        "erc20": true,
+        "symbol": "WETH",
+        "decimals": 18,
+        "chainId": "0x169",
+        "tnt20": true,
+        "autoAdd": false
+    },
+    "0x3c751Feb00364CA9e2d0105c40F0b423abf1DEE3": {
+        "address": "0x3c751Feb00364CA9e2d0105c40F0b423abf1DEE3",
+        "name": "Tether USD",
+        "logo": "usdt.svg",
+        "erc20": true,
+        "symbol": "USDT",
+        "decimals": 6,
+        "chainId": "0x169",
+        "tnt20": true,
+        "autoAdd": false
+    },
+    "0x1336739B05C7Ab8a526D40DCC0d04a826b5f8B03": {
+        "address": "0x1336739B05C7Ab8a526D40DCC0d04a826b5f8B03",
+        "name": "TDrop Token",
+        "logo": "tdrop.png",
+        "erc20": true,
+        "symbol": "TDROP",
+        "decimals": 18,
+        "chainId": "0x169",
+        "tnt20": true,
+        "autoAdd": true,
+        "staking": {
+            "stakingAddress": "0xa89c744db76266eca60e2b0f62afcd1f8581b7ed",
+            "stakeSymbol": "stTDROP",
+            "functionSigs" : {
+                "stake": "0xa694fc3a",
+                "estimateTokensOwned": "0x6b7590f9",
+                "stakedShares": "0x70a08231",
+                "unstakeShares": "0x2e17de78"
+            }
+        }
+    },
+    "0xa89c744db76266eca60e2b0f62afcd1f8581b7ed": {
+        "address": "0xa89c744db76266eca60e2b0f62afcd1f8581b7ed",
+        "name": "TDrop Stake",
+        "contractName": "TDrop Staking Contract",
+        "logo": "staked-tdrop.png",
+        "erc20": true,
+        "symbol": "stTDROP",
+        "decimals": 18,
+        "chainId": "0x169",
+        "tnt20": true,
+        "autoAdd": true,
+        "stakedAsset": {
+            "address": "0x1336739B05C7Ab8a526D40DCC0d04a826b5f8B03",
+            "mode": "SHARES",
+            "functionSigs": {
+                "unstakeShares": "0x2e17de78"
+            }
+        },
+        "unsendable": true
+    }
+}

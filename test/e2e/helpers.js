@@ -1,71 +1,95 @@
-const path = require('path')
-const createStaticServer = require('../../development/create-static-server')
-const Ganache = require('./ganache')
-const FixtureServer = require('./fixture-server')
-const { buildWebDriver } = require('./webdriver')
+const path = require('path');
+const createStaticServer = require('../../development/create-static-server');
+const Ganache = require('./ganache');
+const FixtureServer = require('./fixture-server');
+const { buildWebDriver } = require('./webdriver');
 
-const tinyDelayMs = 200
-const regularDelayMs = tinyDelayMs * 2
-const largeDelayMs = regularDelayMs * 2
+const tinyDelayMs = 200;
+const regularDelayMs = tinyDelayMs * 2;
+const largeDelayMs = regularDelayMs * 2;
 
-const dappPort = 8080
+const dappPort = 8080;
 
-async function withFixtures (options, callback) {
-  const { dapp, fixtures, ganacheOptions, driverOptions, title } = options
-  const fixtureServer = new FixtureServer()
-  const ganacheServer = new Ganache()
-  let dappServer
+async function withFixtures(options, testSuite) {
+  const {
+    dapp,
+    fixtures,
+    ganacheOptions,
+    driverOptions,
+    mockSegment,
+    title,
+    failOnConsoleError = true,
+    dappPath = undefined,
+  } = options;
+  const fixtureServer = new FixtureServer();
+  const ganacheServer = new Ganache();
+  let dappServer;
 
-  let webDriver
+  let webDriver;
   try {
-    await ganacheServer.start(ganacheOptions)
-    await fixtureServer.start()
-    await fixtureServer.loadState(path.join(__dirname, 'fixtures', fixtures))
+    await ganacheServer.start(ganacheOptions);
+    await fixtureServer.start();
+    await fixtureServer.loadState(path.join(__dirname, 'fixtures', fixtures));
     if (dapp) {
-      const dappDirectory = path.resolve(__dirname, '..', '..', 'node_modules', '@metamask', 'test-dapp', 'dist')
-      dappServer = createStaticServer(dappDirectory)
-      dappServer.listen(dappPort)
+      let dappDirectory;
+      if (dappPath) {
+        dappDirectory = path.resolve(__dirname, dappPath);
+      } else {
+        dappDirectory = path.resolve(
+          __dirname,
+          '..',
+          '..',
+          'node_modules',
+          '@metamask',
+          'test-dapp',
+          'dist',
+        );
+      }
+      dappServer = createStaticServer(dappDirectory);
+      dappServer.listen(dappPort);
       await new Promise((resolve, reject) => {
-        dappServer.on('listening', resolve)
-        dappServer.on('error', reject)
-      })
+        dappServer.on('listening', resolve);
+        dappServer.on('error', reject);
+      });
     }
-    const { driver } = await buildWebDriver(driverOptions)
-    webDriver = driver
+    const { driver } = await buildWebDriver(driverOptions);
+    webDriver = driver;
 
-    // eslint-disable-next-line callback-return
+    // eslint-disable-next-line node/callback-return,node/no-callback-literal
     await callback({
       driver,
-    })
+    });
 
     if (process.env.SELENIUM_BROWSER === 'chrome') {
-      const errors = await driver.checkBrowserForConsoleErrors(driver)
+      const errors = await driver.checkBrowserForConsoleErrors(driver);
       if (errors.length) {
-        const errorReports = errors.map((err) => err.message)
-        const errorMessage = `Errors found in browser console:\n${errorReports.join('\n')}`
-        throw new Error(errorMessage)
+        const errorReports = errors.map((err) => err.message);
+        const errorMessage = `Errors found in browser console:\n${errorReports.join(
+          '\n',
+        )}`;
+        throw new Error(errorMessage);
       }
     }
   } catch (error) {
     if (webDriver) {
-      await webDriver.verboseReportOnFailure(title)
+      await webDriver.verboseReportOnFailure(title);
     }
-    throw error
+    throw error;
   } finally {
-    await fixtureServer.stop()
-    await ganacheServer.quit()
+    await fixtureServer.stop();
+    await ganacheServer.quit();
     if (webDriver) {
-      await webDriver.quit()
+      await webDriver.quit();
     }
     if (dappServer) {
       await new Promise((resolve, reject) => {
         dappServer.close((error) => {
           if (error) {
-            return reject(error)
+            return reject(error);
           }
-          return resolve()
-        })
-      })
+          return resolve();
+        });
+      });
     }
   }
 }
@@ -75,4 +99,4 @@ module.exports = {
   regularDelayMs,
   largeDelayMs,
   withFixtures,
-}
+};

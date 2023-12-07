@@ -1,8 +1,4 @@
 {
-  "appName": {
-    "message": "MetaMask",
-    "description": "The name of the application"
-  },
   "reject": {
     "message": "नाकारा"
   },
@@ -14,6 +10,10 @@
   },
   "advanced": {
     "message": "प्रगत"
+  },
+  "appName": {
+    "message": "GTx Wallet",
+    "description": "The name of the application"
   },
   "back": {
     "message": "मागील"

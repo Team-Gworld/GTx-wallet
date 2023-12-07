@@ -1,0 +1,69 @@
+{
+    "0xE922F189111aaC85b60AB2D16120d5173E12CB00": {
+        "address": "0xE922F189111aaC85b60AB2D16120d5173E12CB00",
+        "name": "gNOTE",
+        "logo": "gnote.svg",
+        "image": "gnote.svg",
+        "erc20": true,
+        "erc721": false,
+        "symbol": "gNOTE",
+        "decimals": 18,
+        "chainId": "0x169",
+        "tnt20": true,
+        "autoAdd": true
+    },
+    "0x37D92b98531fb4A670D044416d74Ab2116E4C5e9": {
+        "address": "0x37D92b98531fb4A670D044416d74Ab2116E4C5e9",
+        "name": "gNOTE VOTE NFT",
+        "logo": "gvote.png",
+        "image": "gvote.png",
+        "erc20": false,
+        "erc721": true,
+        "symbol": "gVOTE",
+        "decimals": 0,
+        "chainId": "0x169",
+        "tnt20": true,
+        "autoAdd": true
+    },
+    "0x88986284f9a301F883988D55DD401A5db66368Dd": {
+        "address": "0x88986284f9a301F883988D55DD401A5db66368Dd",
+        "name": "gNOTE Oracle NFT",
+        "logo": "goracle.png",
+        "image": "goracle.png",
+        "erc20": false,
+        "erc721": true,
+        "symbol": "gORCL",
+        "decimals": 0,
+        "chainId": "0x169",
+        "tnt20": true,
+        "autoAdd": true
+    },
+    "0xA3d79C4088aE87EF59254120Fe646560828084c3": {
+        "address": "0xA3d79C4088aE87EF59254120Fe646560828084c3",
+        "name": "OLD gNOTE",
+        "logo": "old-gnote.svg",
+        "image": "old-gnote.svg",
+        "erc20": true,
+        "erc721": false,
+        "symbol": "OLD-gNOTE",
+        "decimals": 18,
+        "chainId": "0x169",
+        "tnt20": true,
+        "autoAdd": false,
+        "dontAutoDetect": true
+    },
+    "0x172D0bD953566538f050aabFEef5E2E8143e09f4": {
+        "address": "0x172D0bD953566538f050aabFEef5E2E8143e09f4",
+        "name": "TBILL Multiplier",
+        "logo": "tbillx.svg",
+        "image": "tbillx.svg",
+        "erc20": false,
+        "erc721": true,
+        "symbol": "TBILLX",
+        "decimals": 0,
+        "chainId": "0x169",
+        "tnt20": true,
+        "skipChainIds": ["0x1"],
+        "autoAdd": true
+    }
+}

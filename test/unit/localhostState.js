@@ -1,4 +1,3 @@
-
 /**
  * @typedef {Object} FirstTimeState
  * @property {Object} config Initial configuration parameters
@@ -16,6 +15,6 @@ const initialState = {
       rpcTarget: 'http://localhost:8545',
     },
   },
-}
+};
 
-export default initialState
+export default initialState;

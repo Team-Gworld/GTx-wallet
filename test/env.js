@@ -1,1 +1,2 @@
-process.env.METAMASK_ENV = 'test'
+process.env.METAMASK_ENV = 'test';
+process.env.INFURA_PROJECT_ID = '00000000000000000000000000000000';

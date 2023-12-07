@@ -72,17 +72,17 @@
     "message": "Dodaj priporočene žetone"
   },
   "addAcquiredTokens": {
-    "message": "Dodaj žetone pridobljene z MetaMask"
+    "message": "Dodaj žetone pridobljene z GTx"
   },
   "amount": {
     "message": "Znesek"
   },
   "appDescription": {
-    "message": "Denarnica za Ethereum v brskalniku",
+    "message": "Denarnica za Theta / GNOTE / Ethereum v brskalniku",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "GTx Wallet",
     "description": "The name of the application"
   },
   "approve": {
@@ -110,7 +110,7 @@
     "message": "Časovnik za samodejno odjavo (minute)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Nastavite, po koliko minutah mirovanja naj se MetaMask samodejno odjavi"
+    "message": "Nastavite, po koliko minutah mirovanja naj se GTx samodejno odjavi"
   },
   "average": {
     "message": "Povprečje"
@@ -125,7 +125,7 @@
     "message": "Varnostno kopirajte kodo Secret Recovery, da ohranite denarnico in sredstva varna."
   },
   "backupApprovalInfo": {
-    "message": "Ta skrivna koda je potrebna za obnovitev denarnice, če izgubite napravo, pozabite geslo, ponovno namestite MetaMask ali želite dostopati do denarnice v drugi napravi."
+    "message": "Ta skrivna koda je potrebna za obnovitev denarnice, če izgubite napravo, pozabite geslo, ponovno namestite GTx ali želite dostopati do denarnice v drugi napravi."
   },
   "backupNow": {
     "message": "Varnostno kopiraj zdaj"
@@ -151,15 +151,12 @@
   },
   "browserNotSupported": {
     "message": "Vaš brskalnik ni podptrt ..."
-  },
-  "builtInCalifornia": {
-    "message": "MetaMask je zasnovan in ustvarjen v Kaliforniji."
-  },
+  },  
   "buyWithWyre": {
     "message": "Kupi ETH z Wyre"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre vam omogoča, da s kreditno kartico nakažete ETH neposredno na svoj račun MetaMask."
+    "message": "Wyre vam omogoča, da s kreditno kartico nakažete ETH neposredno na svoj račun GTx."
   },
   "buyCoinSwitch": {
     "message": "Kupi na CoinSwitch"
@@ -239,11 +236,14 @@
   "connectingToRopsten": {
     "message": "Povezovanje na testno omrežje Ropsten"
   },
+  "connectingToThetaMainnet": {
+    "message": "Povezovanje na glavno omrežje Theta"
+  },
   "connectingToRinkeby": {
     "message": "Povezovanje na testno omrežje Rinkeby"
   },
   "connectingToLocalhost": {
-    "message": "Povezovanje na lokalnega gostitelja 8545 "
+    "message": "Povezovanje na lokalnega gostitelja 8545"
   },
   "connectingToGoerli": {
     "message": "Povezovanje na testno omrežje Goerli"
@@ -333,7 +333,7 @@
     "message": "Neposredno vplačilo ehera"
   },
   "directDepositEtherExplainer": {
-    "message": "Če že imate Ether, ga lahko najhitreje dobite v MetaMask z neposrednim vplačilom."
+    "message": "Če že imate Ether, ga lahko najhitreje dobite v GTx z neposrednim vplačilom."
   },
   "done": {
     "message": "Končano"
@@ -372,16 +372,16 @@
     "message": "Nikoli nikomur ne razkrijte svojega gesla seed phrase."
   },
   "endOfFlowMessage5": {
-    "message": "Pazite na lažno predstavljanje! MetaMask nikoli ne bo spontano zaprosil za vaše geslo seed phrase."
+    "message": "Pazite na lažno predstavljanje! GTx nikoli ne bo spontano zaprosil za vaše geslo seed phrase."
   },
   "endOfFlowMessage6": {
     "message": "Če morate ponovno varnostno kopirati vaše geslo seed phrase, ga najdete v Nastavitve -> Varnost."
   },
   "endOfFlowMessage7": {
-    "message": "Če imate kakršna koli vprašanja ali opazite kaj sumljivega, nam pišite na support@metamask.io."
+    "message": "Če imate kakršna koli vprašanja ali opazite kaj sumljivega, nam pišite na support@gtx.io."
   },
   "endOfFlowMessage8": {
-    "message": "MetaMask ne more obnoviti vašega gesla seed phrase. Več informacij."
+    "message": "GTx ne more obnoviti vašega gesla seed phrase. Več informacij."
   },
   "endOfFlowMessage9": {
     "message": "Več o tem"
@@ -628,7 +628,7 @@
     "message": "Sporočilo"
   },
   "metamaskDescription": {
-    "message": "MetaMask je varen identitetni sklad za Ethereum."
+    "message": "GTx je varen identitetni sklad za Ethereum."
   },
   "metamaskVersion": {
     "message": "Različica"
@@ -643,7 +643,7 @@
     "message": "Moji računi Denarnice"
   },
   "myWalletAccountsDescription": {
-    "message": "Vsi vaši računi, ustvarjeni v MetaMasku, bodo samodejno dodani v ta razdelek."
+    "message": "Vsi vaši računi, ustvarjeni v GTxu, bodo samodejno dodani v ta razdelek."
   },
   "mustSelectOne": {
     "message": "Izbran mora biti vsaj 1 žeton."
@@ -693,7 +693,7 @@
     "message": "Novo omrežje"
   },
   "newToMetaMask": {
-    "message": "Ste novi na MetaMask?"
+    "message": "Ste novi na GTx?"
   },
   "noAlreadyHaveSeed": {
     "message": "Ne, hvala, že imam seed phrase"
@@ -702,10 +702,10 @@
     "message": "Varujte svoje ključe!"
   },
   "protectYourKeysMessage1": {
-    "message": "Bodite previdni  in svoj seed phrase skrbno varujte - obstajajo poročila o spletnih mestih, ki poskušajo posnemati MetaMask. MetaMask nikoli ne bo zahteval vašega gesla seed phrase!"
+    "message": "Bodite previdni  in svoj seed phrase skrbno varujte - obstajajo poročila o spletnih mestih, ki poskušajo posnemati GTx. GTx nikoli ne bo zahteval vašega gesla seed phrase!"
   },
   "protectYourKeysMessage2": {
-    "message": "Hranite svoj seed phrase. Če opazite sumljivo delovanje ali niste prepričani ali je določeno spletno mesto varno, nam pišite na support@metamask.io"
+    "message": "Hranite svoj seed phrase. Če opazite sumljivo delovanje ali niste prepričani ali je določeno spletno mesto varno, nam pišite na support@gtx.io"
   },
   "rpcUrl": {
     "message": "Nov URL RPC"
@@ -754,12 +754,6 @@
   },
   "parameters": {
     "message": "Parametri"
-  },
-  "participateInMetaMetrics": {
-    "message": "Sodelujte v MetaMetrics"
-  },
-  "participateInMetaMetricsDescription": {
-    "message": "Sodelujte v MetaMetrics in nam pomagajte izboljšati MetaMask"
   },
   "password": {
     "message": "Geslo"
@@ -968,7 +962,7 @@
     "message": "Pošlji žetone"
   },
   "sentEther": {
-    "message": "poslani ether"
+    "message": "poslani"
   },
   "sentTokens": {
     "message": "poslani žetoni"
@@ -983,7 +977,7 @@
     "message": "Izberi račun"
   },
   "selectAnAccountHelp": {
-    "message": "Izberi račun za prikaz v MetaMask"
+    "message": "Izberi račun za prikaz v GTx"
   },
   "selectAHigherGasFee": {
     "message": "Izberite višji gas fee, da pospešite obdelavo vaše transakcije.*"
@@ -1097,19 +1091,19 @@
     "message": "Sinhroniziraj z mobilnimi telefonom"
   },
   "syncWithMobileDesc": {
-    "message": "Račune in podatke lahko sinhronizirate s svojo mobilno napravo. Odprite mobilno aplikacijo MetaMask, pojdite na \"Nastavitve\" in tapnite \"Sinhroniziraj z razširitvijo brskalnika\""
+    "message": "Račune in podatke lahko sinhronizirate s svojo mobilno napravo. Odprite mobilno aplikacijo GTx, pojdite na \"Nastavitve\" in tapnite \"Sinhroniziraj z razširitvijo brskalnika\""
   },
   "syncWithMobileDescNewUsers": {
-    "message": "Če ste sedaj prvič odprli aplikacijo MetaMask Mobile, samo sledite korakom v telefonu."
+    "message": "Če ste sedaj prvič odprli aplikacijo GTx Mobile, samo sledite korakom v telefonu."
   },
   "syncWithMobileScanThisCode": {
-    "message": "Skenirajte to kodo z mobilno aplikacijo MetaMask"
+    "message": "Skenirajte to kodo z mobilno aplikacijo GTx"
   },
   "syncWithMobileBeCareful": {
     "message": "Ko skenirate to kodo, naj nihče ne kuka na vaš zaslon"
   },
   "syncWithMobileComplete": {
-    "message": "Vaši podatki so uspešno sinhronizirani. Uživajte v mobilni aplikaciji MetaMask!"
+    "message": "Vaši podatki so uspešno sinhronizirani. Uživajte v mobilni aplikaciji GTx!"
   },
   "terms": {
     "message": "Pogoji uporabe"
@@ -1192,6 +1186,9 @@
   "transferFrom": {
     "message": "Prenesi od"
   },
+  "transferfrom": {
+    "message": "Prenesi od"
+  },
   "troubleTokenBalances": {
     "message": "Če imate težave pri ogledu zneskov žetonov si jih lahko ogledate ",
     "description": "Followed by a link (here) to view token balances"
@@ -1200,7 +1197,7 @@
     "message": "Poskusi znova"
   },
   "typePassword": {
-    "message": "Vnesite vaše MetaMask geslo"
+    "message": "Vnesite vaše GTx geslo"
   },
   "unapproved": {
     "message": "Neodobreno"
@@ -1244,7 +1241,7 @@
   "viewAccount": {
     "message": "Poglej račun"
   },
-  "viewinExplorer": {
+  "viewInExplorer": {
     "message": "Ogled v Explorerju"
   },
   "viewContact": {
@@ -1263,7 +1260,7 @@
     "message": "Dobrodošli nazaj!"
   },
   "welcome": {
-    "message": "Dobrodošli v MetaMask"
+    "message": "Dobrodošli v GTx"
   },
   "writePhrase": {
     "message": "To frazo napišite na papir in shranite na varnem mestu. Če želite še večjo varnost, si jo zapišite na več kosov papirja in shranite na dveh ali treh različnih lokacijah."

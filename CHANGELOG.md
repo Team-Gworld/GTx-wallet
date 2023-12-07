@@ -1,6 +1,45 @@
 # Changelog
 
+    getStakingAllowance not present in refork3. see how to use and integrate
+    initialize various send states not set 
+
+    is "type" set on txMeta, or is it transactionCategory?
+
+
 ## Current Develop Branch
+
+
+
+## 2023-10-13 10:18ET 439141cb834c1cc47aec512981f4fd64a1095658
+- cdc6865d469dfb2b382c73d50cd78d31631a05e3^..6dac5a5147761a63d6c9f9d9c60a9f44abd89b49
+- removed metametrics
+- added min update interval of 15 secs to update exchange rates and fixed don't save blank rates object
+- fixed signature request should show NativeCurrency not ETH
+- rename send.token and sendtoken to send.asset and sendasset, update other related vars
+
+
+## 2023-10-10
+- add single call balance checking for theta mainnet
+- add "skipChainIds" parameter to tokens map allowing to skip token tracker for specified contracts
+- add "dontAutoDetect" parameter to tokens map to skip auto adding certain tokens even if wallet has a balance
+- allow logos in token maps to be remote from https or ipfs as well as local to the wallet (may want to remove this)
+- allow token symbols to be 9 characters instead of 6
+- remove overly-intrusive alerts on 3rd party wallet conflict
+- upgrade token tracker from 3.0.0 to 3.0.1, node from 10.16.0 to 10.24.1
+- group thousands with a thin-space between to make large numbers easier to read
+- fix issue where chainId was sometimes off after selecting Theta Mainnet and don't set type to theta_mainnet since it uses RPC mode
+- added hook "useCurrentChainId" but this is currently unused and can be removed
+- correct missing / different network theme colors
+- improved support for TFUEL and other native currencies other than ETH including showing tfuel-usd fiat values
+- fixed bug where Edit Transaction from Confirm screen did not know token properties
+- increase token tracker polling from 8 secs to 15 since Theta Mainnet RPC has low rate limits
+- improve token tracker handling of network switching
+- make add token search work properly for chains other than Ethereum, such as Theta Mainnet and include the GTx and Theta token lists in the search
+- show tfuel logo on confirmation screen for tfuel amounts, and other places where appropriate
+- have a few text items use the translation system that were hard coded
+- fix a few crashing bugs when items were undefined
+- don't list tokens from other networks in asset list. show token logos in asset list.
+- fix all items with lint warnings
 
 ## 8.0.9 Wed Aug 19 2020
 - [#9228](https://github.com/MetaMask/metamask-extension/pull/9228): Move transaction confirmation footer buttons to scrollable area

@@ -1,0 +1,13 @@
+diff --git a/node_modules/eth-trezor-keyring/index.js b/node_modules/eth-trezor-keyring/index.js
+index a01d9e5..f4f152a 100644
+--- a/node_modules/eth-trezor-keyring/index.js
++++ b/node_modules/eth-trezor-keyring/index.js
+@@ -29,7 +29,7 @@ class TrezorKeyring extends EventEmitter {
+     this.unlockedAccount = 0;
+     this.paths = {};
+     this.deserialize(opts);
+-    TrezorConnect.manifest(TREZOR_CONNECT_MANIFEST);
++    try{TrezorConnect.manifest(TREZOR_CONNECT_MANIFEST)} catch (_err) {} // try needed only for unit-tests
+   }
+ 
+   serialize() {

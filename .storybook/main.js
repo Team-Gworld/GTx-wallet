@@ -1,8 +1,9 @@
 module.exports = {
-  stories: ['../ui/app/**/*.stories.js'],
+  stories: ['../ui/**/*.stories.js'],
   addons: [
     '@storybook/addon-knobs',
     '@storybook/addon-actions',
-    '@storybook/addon-backgrounds'
+    '@storybook/addon-backgrounds',
   ],
-}
+  staticDirs: ['../app', './images'],
+};

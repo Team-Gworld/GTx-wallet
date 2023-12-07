@@ -1,0 +1,17 @@
+diff --git a/node_modules/@metamask/providers/dist/utils.js b/node_modules/@metamask/providers/dist/utils.js
+index 3397564..31b1632 100644
+--- a/node_modules/@metamask/providers/dist/utils.js
++++ b/node_modules/@metamask/providers/dist/utils.js
+@@ -23,7 +23,11 @@ function createErrorMiddleware(log) {
+             if (!error) {
+                 return done();
+             }
+-            log.error(`MetaMask - RPC Error: ${error.message}`, error);
++            if (error.code === 4001){
++                log.info(error.message);
++            } else {
++                log.error(`MetaMask - RPC Error: ${error.message}`, error);
++            }
+             return done();
+         });
+     };

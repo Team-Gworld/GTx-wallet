@@ -1,8 +1,4 @@
 {
-  "appName": {
-    "message": "MetaMask",
-    "description": "The name of the application"
-  },
   "reject": {
     "message": "Rejeitar"
   },
@@ -17,6 +13,10 @@
   },
   "amount": {
     "message": "Quantia"
+  },
+  "appName": {
+    "message": "GTx Wallet",
+    "description": "The name of the application"
   },
   "back": {
     "message": "Anterior"

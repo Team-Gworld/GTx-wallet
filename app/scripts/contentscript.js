@@ -1,28 +1,24 @@
-import querystring from 'querystring'
-import pump from 'pump'
-import LocalMessageDuplexStream from 'post-message-stream'
-import ObjectMultiplex from 'obj-multiplex'
-import extension from 'extensionizer'
-import PortStream from 'extension-port-stream'
+import querystring from 'querystring';
+import pump from 'pump';
+import { WindowPostMessageStream } from '@metamask/post-message-stream';
+import ObjectMultiplex from 'obj-multiplex';
+import extension from 'extensionizer';
+import PortStream from 'extension-port-stream';
 
 // These require calls need to use require to be statically recognized by browserify
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
 
-const inpageContent = fs.readFileSync(path.join(__dirname, '..', '..', 'dist', 'chrome', 'inpage.js'), 'utf8')
-const inpageSuffix = `//# sourceURL=${extension.runtime.getURL('inpage.js')}\n`
-const inpageBundle = inpageContent + inpageSuffix
-
-// Eventually this streaming injection could be replaced with:
-// https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.exportFunction
-//
-// But for now that is only Firefox
-// If we create a FireFox-only code path using that API,
-// MetaMask will be much faster loading and performant on Firefox.
+const inpageContent = fs.readFileSync(
+  path.join(__dirname, '..', '..', 'dist', 'chrome', 'inpage.js'),
+  'utf8',
+);
+const inpageSuffix = `//# sourceURL=${extension.runtime.getURL('inpage.js')}\n`;
+const inpageBundle = inpageContent + inpageSuffix;
 
 if (shouldInjectProvider()) {
-  injectScript(inpageBundle)
-  start()
+  injectScript(inpageBundle);
+  start();
 }
 
 /**
@@ -30,16 +26,16 @@ if (shouldInjectProvider()) {
  *
  * @param {string} content - Code to be executed in the current document
  */
-function injectScript (content) {
+function injectScript(content) {
   try {
-    const container = document.head || document.documentElement
-    const scriptTag = document.createElement('script')
-    scriptTag.setAttribute('async', 'false')
-    scriptTag.textContent = content
-    container.insertBefore(scriptTag, container.children[0])
-    container.removeChild(scriptTag)
+    const container = document.head || document.documentElement;
+    const scriptTag = document.createElement('script');
+    scriptTag.setAttribute('async', 'false');
+    scriptTag.textContent = content;
+    container.insertBefore(scriptTag, container.children[0]);
+    container.removeChild(scriptTag);
   } catch (e) {
-    console.error('MetaMask provider injection failed.', e)
+    console.error('GTx Wallet provider injection failed.', e);
   }
 }
 
@@ -47,9 +43,9 @@ function injectScript (content) {
  * Sets up the stream communication and submits site metadata
  *
  */
-async function start () {
-  await setupStreams()
-  await domIsReady()
+async function start() {
+  await setupStreams();
+  await domIsReady();
 }
 
 /**
@@ -57,53 +53,79 @@ async function start () {
  * browser extension and local per-page browser context.
  *
  */
-async function setupStreams () {
+async function setupStreams() {
   // the transport-specific streams for communication between inpage and background
-  const pageStream = new LocalMessageDuplexStream({
-    name: 'contentscript',
-    target: 'inpage',
-  })
-  const extensionPort = extension.runtime.connect({ name: 'contentscript' })
-  const extensionStream = new PortStream(extensionPort)
+  const pageStream = new WindowPostMessageStream({
+    name: 'gtx-contentscript',
+    target: 'gtx-inpage',
+  });
+  const extensionPort = extension.runtime.connect({ name: 'gtx-contentscript' });
+  const extensionStream = new PortStream(extensionPort);
 
   // create and connect channel muxers
   // so we can handle the channels individually
-  const pageMux = new ObjectMultiplex()
-  pageMux.setMaxListeners(25)
-  const extensionMux = new ObjectMultiplex()
-  extensionMux.setMaxListeners(25)
-
-  pump(
-    pageMux,
-    pageStream,
-    pageMux,
-    (err) => logStreamDisconnectWarning('MetaMask Inpage Multiplex', err),
-  )
-  pump(
-    extensionMux,
-    extensionStream,
-    extensionMux,
-    (err) => logStreamDisconnectWarning('MetaMask Background Multiplex', err),
-  )
+  const pageMux = new ObjectMultiplex();
+  pageMux.setMaxListeners(25);
+  //... move block
+  const extensionMux = new ObjectMultiplex();
+  extensionMux.setMaxListeners(25);
+  extensionMux.ignoreStream('gtxPublicConfig'); // deprecated stream
+  pump(pageMux, pageStream, pageMux, (err) =>
+    logStreamDisconnectWarning('GTx Wallet Inpage Multiplex', err),
+  );
+  
+  
+  pump(extensionMux, extensionStream, extensionMux, (err) => 
+    logStreamDisconnectWarning('GTx Wallet Background Multiplex', err),
+  );
 
   // forward communication across inpage-background for these channels only
-  forwardTrafficBetweenMuxers('provider', pageMux, extensionMux)
-  forwardTrafficBetweenMuxers('publicConfig', pageMux, extensionMux)
+  forwardTrafficBetweenMuxers('gtx-provider', 'gtx-provider', pageMux, extensionMux);
 
   // connect "phishing" channel to warning system
-  const phishingStream = extensionMux.createStream('phishing')
-  phishingStream.once('data', redirectToPhishingWarning)
+  const phishingStream = extensionMux.createStream('phishing');
+  phishingStream.once('data', redirectToPhishingWarning);
+
+  const legacyPageStream = new WindowPostMessageStream({
+    name: 'contentscript',
+    target: 'inpage',
+  });
+
+  const legacyPageMux = new ObjectMultiplex();
+  legacyPageMux.setMaxListeners(25);
+  pump(legacyPageMux, legacyPageStream, legacyPageMux, (err) =>
+    logStreamDisconnectWarning('GTx Wallet Legacy Inpage Multiplex', err),
+  );
+
+  const legacyExtensionMux = new ObjectMultiplex();
+  legacyExtensionMux.setMaxListeners(25);
+  pump(
+    legacyExtensionMux,
+    extensionStream,
+    legacyExtensionMux,
+    (err) => {
+      logStreamDisconnectWarning('GTx Wallet Background Legacy Multiplex', err);
+    },
+  );
+
+  forwardTrafficBetweenMuxers('provider', 'gtx-provider', legacyPageMux, legacyExtensionMux);
+  forwardTrafficBetweenMuxers('gtxPublicConfig', 'gtxPublicConfig', legacyPageMux, legacyExtensionMux);
 }
 
-function forwardTrafficBetweenMuxers (channelName, muxA, muxB) {
-  const channelA = muxA.createStream(channelName)
-  const channelB = muxB.createStream(channelName)
-  pump(
+function forwardTrafficBetweenMuxers(channelNameA, channelNameB, muxA, muxB) {
+  const channelA = muxA.createStream(channelNameA);
+  const channelB = muxB.createStream(channelNameB);
+  const streams = [
     channelA,
     channelB,
     channelA,
-    (err) => logStreamDisconnectWarning(`MetaMask muxed traffic for channel "${channelName}" failed.`, err),
-  )
+  ];
+  pump(...streams, (err) =>
+    logStreamDisconnectWarning(
+      `GTx Wallet muxed traffic between channels "${channelNameA}" and "${channelNameB}" failed.`,
+      err,
+    ),
+  );
 }
 
 /**
@@ -112,12 +134,12 @@ function forwardTrafficBetweenMuxers (channelName, muxA, muxB) {
  * @param {string} remoteLabel - Remote stream name
  * @param {Error} err - Stream connection error
  */
-function logStreamDisconnectWarning (remoteLabel, err) {
-  let warningMsg = `MetamaskContentscript - lost connection to ${remoteLabel}`
+function logStreamDisconnectWarning(remoteLabel, err) {
+  let warningMsg = `GTxWalletContentscript - lost connection to ${remoteLabel}`;
   if (err) {
-    warningMsg += `\n${err.stack}`
+    warningMsg += `\n${err.stack}`;
   }
-  console.warn(warningMsg)
+  console.warn(warningMsg);
 }
 
 /**
@@ -125,9 +147,13 @@ function logStreamDisconnectWarning (remoteLabel, err) {
  *
  * @returns {boolean} {@code true} - if the provider should be injected
  */
-function shouldInjectProvider () {
-  return doctypeCheck() && suffixCheck() &&
-    documentElementCheck() && !blockedDomainCheck()
+function shouldInjectProvider() {
+  return (
+    doctypeCheck() &&
+    suffixCheck() &&
+    documentElementCheck() &&
+    !blockedDomainCheck()
+  );
 }
 
 /**
@@ -135,12 +161,12 @@ function shouldInjectProvider () {
  *
  * @returns {boolean} {@code true} - if the doctype is html or if none exists
  */
-function doctypeCheck () {
-  const { doctype } = window.document
+function doctypeCheck() {
+  const { doctype } = window.document;
   if (doctype) {
-    return doctype.name === 'html'
+    return doctype.name === 'html';
   }
-  return true
+  return true;
 }
 
 /**
@@ -152,18 +178,15 @@ function doctypeCheck () {
  *
  * @returns {boolean} - whether or not the extension of the current document is prohibited
  */
-function suffixCheck () {
-  const prohibitedTypes = [
-    /\.xml$/u,
-    /\.pdf$/u,
-  ]
-  const currentUrl = window.location.pathname
+function suffixCheck() {
+  const prohibitedTypes = [/\.xml$/u, /\.pdf$/u];
+  const currentUrl = window.location.pathname;
   for (let i = 0; i < prohibitedTypes.length; i++) {
     if (prohibitedTypes[i].test(currentUrl)) {
-      return false
+      return false;
     }
   }
-  return true
+  return true;
 }
 
 /**
@@ -171,12 +194,12 @@ function suffixCheck () {
  *
  * @returns {boolean} {@code true} - if the documentElement is an html node or if none exists
  */
-function documentElementCheck () {
-  const documentElement = document.documentElement.nodeName
+function documentElementCheck() {
+  const documentElement = document.documentElement.nodeName;
   if (documentElement) {
-    return documentElement.toLowerCase() === 'html'
+    return documentElement.toLowerCase() === 'html';
   }
-  return true
+  return true;
 }
 
 /**
@@ -184,7 +207,7 @@ function documentElementCheck () {
  *
  * @returns {boolean} {@code true} - if the current domain is blocked
  */
-function blockedDomainCheck () {
+function blockedDomainCheck() {
   const blockedDomains = [
     'uscourts.gov',
     'dropbox.com',
@@ -196,39 +219,44 @@ function blockedDomainCheck () {
     'ani.gamer.com.tw',
     'blueskybooking.com',
     'sharefile.com',
-  ]
-  const currentUrl = window.location.href
-  let currentRegex
+  ];
+  const currentUrl = window.location.href;
+  let currentRegex;
   for (let i = 0; i < blockedDomains.length; i++) {
-    const blockedDomain = blockedDomains[i].replace('.', '\\.')
-    currentRegex = new RegExp(`(?:https?:\\/\\/)(?:(?!${blockedDomain}).)*$`, 'u')
+    const blockedDomain = blockedDomains[i].replace('.', '\\.');
+    currentRegex = new RegExp(
+      `(?:https?:\\/\\/)(?:(?!${blockedDomain}).)*$`,
+      'u',
+    );
     if (!currentRegex.test(currentUrl)) {
-      return true
+      return true;
     }
   }
-  return false
+  return false;
 }
 
 /**
  * Redirects the current page to a phishing information page
  */
-function redirectToPhishingWarning () {
-  console.log('MetaMask - routing to Phishing Warning component')
-  const extensionURL = extension.runtime.getURL('phishing.html')
+function redirectToPhishingWarning() {
+  console.log('GTx Wallet - routing to Phishing Warning component');
+  const extensionURL = extension.runtime.getURL('phishing.html');
   window.location.href = `${extensionURL}#${querystring.stringify({
     hostname: window.location.hostname,
     href: window.location.href,
-  })}`
+  })}`;
 }
 
 /**
  * Returns a promise that resolves when the DOM is loaded (does not wait for images to load)
  */
-async function domIsReady () {
+async function domIsReady() {
   // already loaded
   if (['interactive', 'complete'].includes(document.readyState)) {
-    return undefined
+    return undefined;
   }
   // wait for load
-  return new Promise((resolve) => window.addEventListener('DOMContentLoaded', resolve, { once: true }))
+  return new Promise((resolve) =>
+    window.addEventListener('DOMContentLoaded', resolve, { once: true }),
+  );
 }

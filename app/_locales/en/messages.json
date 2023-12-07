@@ -21,13 +21,6 @@
   "connectedAccountsDescriptionSingular": {
     "message": "You have 1 account connected to this site."
   },
-  "connectedAccountsDescriptionPlural": {
-    "message": "You have $1 accounts connected to this site.",
-    "description": "$1 is the number of accounts"
-  },
-  "connectedAccountsEmptyDescription": {
-    "message": "MetaMask is not connected this site. To connect to a web3 site, find the connect button on their site."
-  },
   "currentAccountNotConnected": {
     "message": "Your current account is not connected"
   },
@@ -45,9 +38,6 @@
   },
   "authorizedPermissions": {
     "message": "You have authorized the following permissions"
-  },
-  "connectManually": {
-    "message": "Manually connect to current site"
   },
   "disconnect": {
     "message": "Disconnect"
@@ -67,21 +57,15 @@
   "showIncomingTransactions": {
     "message": "Show Incoming Transactions"
   },
-  "showIncomingTransactionsDescription": {
-    "message": "Select this to use Etherscan to show incoming transactions in the transactions list"
-  },
   "chartOnlyAvailableEth": {
     "message": "Chart only available on Ethereum networks."
   },
   "connecting": {
     "message": "Connecting..."
   },
-  "connectWithMetaMask": {
-    "message": "Connect With MetaMask"
-  },
   "connectTo": {
     "message": "Connect to $1",
-    "description": "$1 is the name/origin of a web3 site/application that the user can connect to metamask"
+    "description": "$1 is the name/origin of a web3 site/application that the user can connect to GTx Wallet"
   },
   "connectToAll": {
     "message": "Connect to all your $1",
@@ -101,9 +85,6 @@
   },
   "contractInteraction": {
     "message": "Contract Interaction"
-  },
-  "reject": {
-    "message": "Reject"
   },
   "about": {
     "message": "About"
@@ -145,11 +126,47 @@
   "activityLog": {
     "message": "activity log"
   },
+  "addAcquiredTokens": {
+    "message": "Add the tokens you've acquired using GTx Wallet"
+  },
+  "addAlias": {
+    "message": "Add alias"
+  },
+  "addContact": {
+    "message": "Add contact"
+  },
+  "addCustomTokenByContractAddress": {
+    "message": "Can’t find a token? You can manually add any token by pasting its address. Token contract addresses can be found on $1.",
+    "description": "$1 is a blockchain explorer for a specific network, e.g. Etherscan for Ethereum"
+  },
+  "addEthereumChainConfirmationDescription": {
+    "message": "This will allow this network to be used within GTx Wallet."
+  },
+  "addEthereumChainConfirmationRisks": {
+    "message": "GTx Wallet does not verify custom networks."
+  },
+  "addEthereumChainConfirmationRisksLearnMore": {
+    "message": "Learn about $1.",
+    "description": "$1 is a link with text that is provided by the 'addEthereumChainConfirmationRisksLearnMoreLink' key"
+  },
+  "addEthereumChainConfirmationRisksLearnMoreLink": {
+    "message": "scams and network security risks",
+    "description": "Link text for the 'addEthereumChainConfirmationRisksLearnMore' translation key"
+  },
+  "addEthereumChainConfirmationTitle": {
+    "message": "Allow this site to add a network?"
+  },
+  "addFriendsAndAddresses": {
+    "message": "Add friends and addresses you trust"
+  },
   "addNetwork": {
     "message": "Add Network"
   },
   "addRecipient": {
     "message": "Add Recipient"
+  },
+  "addStake": {
+    "message": "Add Stake"
   },
   "advanced": {
     "message": "Advanced"
@@ -166,9 +183,6 @@
   "addToAddressBookModalPlaceholder": {
     "message": "e.g. John D."
   },
-  "addAlias": {
-    "message": "Add alias"
-  },
   "addToken": {
     "message": "Add Token"
   },
@@ -177,9 +191,6 @@
   },
   "addSuggestedTokens": {
     "message": "Add Suggested Tokens"
-  },
-  "addAcquiredTokens": {
-    "message": "Add the tokens you've acquired using MetaMask"
   },
   "alerts": {
     "message": "Alerts"
@@ -192,6 +203,13 @@
   },
   "alertSettingsUnconnectedAccountDescription": {
     "message": "This alert is shown in the popup when you are browsing a connected Web3 site, but the currently selected account is not connected."
+  },
+  "all": {
+    "message": "All"
+  },
+  "allOfToken": {
+    "message": "All $1",
+    "description": "$1 is the symbol of the asset which is being acted upon (example: all of it is being unstaked)"
   },
   "allowOriginSpendToken": {
     "message": "Allow $1 to spend your $2?",
@@ -210,19 +228,31 @@
   "amount": {
     "message": "Amount"
   },
+  "amountGtMaxStake": {
+    "message": "Amount more than maximum stake"
+  },
+  "amountLtMinStake": {
+    "message": "Amount less than minimum stake"
+  },
+  "amountPlusGasFee": {
+    "message": "Amount + Gas Fee"
+  },
   "amountWithColon": {
     "message": "Amount:"
   },
   "appDescription": {
-    "message": "An Ethereum Wallet in your Browser",
+    "message": "A  Theta / GNOTE / Ethereum Wallet in your Browser",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "GTx Wallet",
     "description": "The name of the application"
   },
   "approve": {
     "message": "Approve spend limit"
+  },
+  "approveButtonText": {
+    "message": "Approve"
   },
   "approveSpendLimit": {
     "message": "Approve $1 spend limit",
@@ -233,6 +263,9 @@
   },
   "asset": {
     "message": "Asset"
+  },
+  "assetOptions": {
+    "message": "Asset options"
   },
   "assets": {
     "message": "Assets"
@@ -253,7 +286,7 @@
     "message": "Auto-Lock Timer (minutes)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Set the idle time in minutes before MetaMask will become locked."
+    "message": "Set the idle time in minutes before GTx Wallet will become locked."
   },
   "average": {
     "message": "Average"
@@ -264,11 +297,20 @@
   "backToAll": {
     "message": "Back to All"
   },
+  "backup": {
+    "message": "Backup"
+  },
   "backupApprovalNotice": {
-    "message": "Backup your Secret Recovery code to keep your wallet and funds secure."
+    "message": "Backup your Seed Phrase to keep your wallet and funds secure."
   },
   "backupApprovalInfo": {
-    "message": "This secret code is required to recover your wallet in case you lose your device, forget your password, have to re-install MetaMask, or want to access your wallet on another device."
+    "message": "This secret code is required to recover your wallet in case you lose your device, forget your password, have to re-install GTx Wallet, or want to access your wallet on another device."
+  },
+  "backupUserData": {
+    "message": "Backup User Data"
+  },
+  "backupDataDescription": {
+    "message": "Save user preferences, networks, and tokens, but not wallets, to a local file"
   },
   "backupNow": {
     "message": "Backup now"
@@ -304,14 +346,17 @@
   "browserNotSupported": {
     "message": "Your Browser is not supported..."
   },
-  "builtInCalifornia": {
-    "message": "MetaMask is designed and built in California."
+  "builtAroundTheWorld": {
+    "message": "GTx Wallet is designed and built around the world."
+  },
+  "buyWithTransakDescription": {
+    "message": "Transak supports debit card and bank transfers (depending on location) in 59+ countries. ETH deposits into your GTx Wallet account."
   },
   "buyWithWyre": {
     "message": "Buy ETH with Wyre"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre lets you use a debit card to deposit ETH right in to your MetaMask account."
+    "message": "Wyre lets you use a debit card to deposit ETH right in to your GTx Wallet account."
   },
   "buyCoinSwitch": {
     "message": "Buy on CoinSwitch"
@@ -346,8 +391,17 @@
   "cancelled": {
     "message": "Cancelled"
   },
+  "capsLockIsOn": {
+    "message": "Caps Lock is ON"
+  },
   "chainId": {
     "message": "Chain ID"
+  },
+  "chainIdDefinition": {
+    "message": "The chain ID used to sign transactions for this network."
+  },
+  "chromeRequiredForHardwareWallets": {
+    "message": "You need to use GTx Wallet on Google Chrome in order to connect to your Hardware Wallet."
   },
   "clickToRevealSeed": {
     "message": "Click here to reveal secret words"
@@ -355,8 +409,8 @@
   "close": {
     "message": "Close"
   },
-  "chromeRequiredForHardwareWallets": {
-    "message": "You need to use MetaMask on Google Chrome in order to connect to your Hardware Wallet."
+  "comingSoon": {
+    "message": "Coming soon"
   },
   "confirm": {
     "message": "Confirm"
@@ -382,6 +436,9 @@
   "connect": {
     "message": "Connect"
   },
+  "connectManually": {
+    "message": "Manually connect to current site"
+  },
   "connectingTo": {
     "message": "Connecting to $1"
   },
@@ -389,10 +446,23 @@
     "message": "Connecting to Kovan Test Network"
   },
   "connectingToMainnet": {
-    "message": "Connecting to Main Ethereum Network"
+    "message": "Connecting to Ethereum Mainnet"
   },
   "connectingToRopsten": {
     "message": "Connecting to Ropsten Test Network"
+  },
+  "connectWithMetaMask": {
+    "message": "Connect With GTx Wallet"
+  },
+  "connectedAccountsDescriptionPlural": {
+    "message": "You have $1 accounts connected to this site.",
+    "description": "$1 is the number of accounts"
+  },
+  "connectedAccountsEmptyDescription": {
+    "message": "GTx Wallet is not connected this site. To connect to a web3 site, find the connect button on their site."
+  },
+  "connectingToThetaMainnet":{
+    "message": "Connecting to Theta Mainnet"
   },
   "connectingToRinkeby": {
     "message": "Connecting to Rinkeby Test Network"
@@ -476,7 +546,7 @@
     "message": "Custom Spend Limit"
   },
   "dataBackupFoundInfo": {
-    "message": "Some of your account data was backed up during a previous installation of MetaMask. This could include your settings, contacts, and tokens. Would you like to restore this data now?"
+    "message": "Some of your account data was backed up during a previous installation of GTx Wallet. This could include your settings, contacts, and tokens. Would you like to restore this data now?"
   },
   "decimalsMustZerotoTen": {
     "message": "Decimals must be at least 0, and not over 36."
@@ -485,7 +555,7 @@
     "message": "Decimals of Precision"
   },
   "defaultNetwork": {
-    "message": "The default network for Ether transactions is Main Net."
+    "message": "The default network for TFuel transactions is Theta Mainnet."
   },
   "delete": {
     "message": "Delete"
@@ -506,7 +576,7 @@
     "message": "Directly Deposit Ether"
   },
   "directDepositEtherExplainer": {
-    "message": "If you already have some Ether, the quickest way to get Ether in your new wallet by direct deposit."
+    "message": "If you already have some coins or tokens, the quickest way to get them in your new wallet is by direct deposit."
   },
   "done": {
     "message": "Done"
@@ -538,6 +608,12 @@
   "editPermission": {
     "message": "Edit Permission"
   },
+  "een": {
+    "message": "EEN"
+  },
+  "eliteEdgeNode": {
+    "message": "Elite Edge Node"
+  },
   "endOfFlowMessage1": {
     "message": "You passed the test - keep your seedphrase safe, it's your responsibility!"
   },
@@ -551,16 +627,16 @@
     "message": "Never share the phrase with anyone."
   },
   "endOfFlowMessage5": {
-    "message": "Be careful of phishing! MetaMask will never spontaneously ask for your seed phrase."
+    "message": "Be careful of phishing! GTx Wallet will never spontaneously ask for your seed phrase."
   },
   "endOfFlowMessage6": {
     "message": "If you need to back up your seed phrase again, you can find it in Settings -> Security."
   },
   "endOfFlowMessage7": {
-    "message": "If you ever have questions or see something fishy, email support@metamask.io."
+    "message": "If you ever have questions or see something fishy, email support@gtx.io."
   },
   "endOfFlowMessage8": {
-    "message": "MetaMask cannot recover your seedphrase."
+    "message": "GTx Wallet cannot recover your seed phrase."
   },
   "endOfFlowMessage9": {
     "message": "Learn more."
@@ -579,7 +655,7 @@
     "message": "Error in ENS name registration"
   },
   "ensNotFoundOnCurrentNetwork": {
-    "message": "ENS name not found on the current network. Try switching to Main Ethereum Network."
+    "message": "ENS name not found on the current network. Try switching to Ethereum Mainnet."
   },
   "enterAnAlias": {
     "message": "Enter an alias"
@@ -609,17 +685,17 @@
     "message": "Code: $1",
     "description": "Displayed error name for debugging purposes. $1 is the error name"
   },
-  "errorPageTitle": {
-    "message": "MetaMask encountered an error",
-    "description": "Title of generic error page"
-  },
   "errorPageMessage": {
-    "message": "Try again by reloading the page, or contact support at support@metamask.io",
-    "description": "Message displayed on generic error page in the fullscreen or notification UI"
+    "message": "Try again by reloading the page.",
+    "description": "Message displayed on generic error page in the fullscreen or notification UI, $1 is a clickable link with text defined by the 'here' key. The link will open to a form where users can file support tickets."
   },
   "errorPagePopupMessage": {
-    "message": "Try again by closing and reopening the popup, or contact support at support@metamask.io",
-    "description": "Message displayed on generic error page in the popup UI"
+    "message": "Try again by closing and reopening the popup.",
+    "description": "Message displayed on generic error page in the popup UI, $1 is a clickable link with text defined by the 'here' key. The link will open to a form where users can file support tickets."
+  },
+  "errorPageTitle": {
+    "message": "GTx Wallet encountered an error",
+    "description": "Title of generic error page"
   },
   "errorStack": {
     "message": "Stack:",
@@ -688,6 +764,15 @@
   "gasLimitTooLow": {
     "message": "Gas limit must be at least 21000"
   },
+  "gasMaxFee": {
+    "message": "Gas Max Fee"
+  },
+  "gasMaxFeeInfoModalContent": {
+    "message": "Gas Max Fee specifies the maximum amount you are willing to pay for each unit of gas, including the priority fee."
+  },
+  "gasPriorityFee": {
+    "message": "Gas Priority Fee"
+  },
   "gasUsed": {
     "message": "Gas Used"
   },
@@ -698,8 +783,11 @@
     "message": "Gas Price Extremely Low"
   },
   "gasPriceInfoModalContent": {
-    "message": "Gas price specifies the amount of Ether you are willing to pay for each unit of gas."
+    "message": "Gas price specifies the amount you are willing to pay for each unit of gas."
   },
+  "gasPriorityFeeInfoModalContent": {
+    "message": "Gas Priority Fee specifies the maximum amount you are willing to tip the miner of the transaction above the current base fee for gas."
+  },  
   "gasPriceNoDenom": {
     "message": "Gas Price"
   },
@@ -718,11 +806,11 @@
     "message": "Currency conversion, primary currency, language, blockies identicon"
   },
   "getEther": {
-    "message": "Get Ether"
+    "message": "Get Coins"
   },
   "getEtherFromFaucet": {
-    "message": "Get Ether from a faucet for the $1",
-    "description": "Displays network name for Ether faucet"
+    "message": "Get Coins from a faucet for the $1",
+    "description": "Displays network name for faucet"
   },
   "getHelp": {
     "message": "Get Help."
@@ -739,11 +827,15 @@
   "hardwareWalletConnected": {
     "message": "Hardware wallet connected"
   },
+  "hardwareWalletLegacyDescription": {
+    "message": "(legacy)",
+    "description": "Text representing the MEW path"
+  },
   "hardwareWallets": {
     "message": "Connect a hardware wallet"
   },
   "hardwareWalletsMsg": {
-    "message": "Select a hardware wallet you'd like to use with MetaMask"
+    "message": "Select a hardware wallet you'd like to use with GTx Wallet."
   },
   "havingTroubleConnecting": {
     "message": "Having trouble connecting?"
@@ -758,6 +850,9 @@
   "hide": {
     "message": "Hide"
   },
+  "hideFullTransactionDetails": {
+    "message": "Hide full transaction details"
+  },
   "hideTokenSymbol": {
     "message": "Hide $1",
     "description": "$1 is the symbol for a token (e.g. 'DAI')"
@@ -768,6 +863,15 @@
   "history": {
     "message": "History"
   },
+  "holder": {
+    "message": "Holder"
+  },
+  "holderOrSummaryPlaceholder": {
+    "message": "0x"
+  },
+  "holderSummary": {
+    "message": "Summary"
+  },
   "import": {
     "message": "Import",
     "description": "Button to import an account from a selected file"
@@ -776,7 +880,7 @@
     "message": "Import Account"
   },
   "importAccountMsg": {
-    "message": " Imported accounts will not be associated with your originally created MetaMask account seedphrase. Learn more about imported accounts "
+    "message": " Imported accounts will not be associated with your originally created GTx Wallet account seed phrase. Learn more about imported accounts "
   },
   "importAccountSeedPhrase": {
     "message": "Import an account with seed phrase"
@@ -794,20 +898,39 @@
   "importUsingSeed": {
     "message": "Import using account seed phrase"
   },
+  "incoming": {
+    "message": "Incoming"
+  },
+  "inCooldown": {
+    "message": "In Cooldown",
+    "description": "Used when stake is in withdrawal cooldown period"
+  },
   "infoHelp": {
     "message": "Info & Help"
   },
   "initialTransactionConfirmed": {
     "message": "Your initial transaction was confirmed by the network. Click OK to go back."
   },
+  "insufficientAllowanceForStake": {
+    "message": "Amount requires approval."
+  },
   "insufficientBalance": {
     "message": "Insufficient balance."
+  },
+  "insufficientBalForTfWrap": {
+    "message": "Minimum remaining balance of 40 TFUEL after tx required to wrap TFUEL."
+  },
+  "insufficientBalForWrapUnwrap": {
+    "message": "Minimum balance of 40 TFUEL required for all wrap/unwrap transactions."
   },
   "insufficientFunds": {
     "message": "Insufficient funds."
   },
   "insufficientTokens": {
     "message": "Insufficient tokens."
+  },
+  "invalid": {
+    "message": "Invalid"
   },
   "invalidAddress": {
     "message": "Invalid address"
@@ -827,6 +950,12 @@
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Not ETH network, set to lowercase"
   },
+  "invalidHolder": {
+    "message": "Invalid Holder"
+  },
+  "invalidHolderSummary": {
+    "message": "Invalid Summary"
+  },
   "invalidInput": {
     "message": "Invalid input."
   },
@@ -836,18 +965,21 @@
   "invalidBlockExplorerURL": {
     "message": "Invalid Block Explorer URL"
   },
+  "invalidIpfsGateway": {
+    "message": "Invalid IPFS Gateway: The value must be a valid URL"
+  },
   "invalidSeedPhrase": {
     "message": "Invalid seed phrase"
+  },
+  "inventory": {
+    "message": "Inventory"
   },
   "ipfsGateway": {
     "message": "IPFS Gateway"
   },
   "ipfsGatewayDescription": {
     "message": "Enter the URL of the IPFS CID gateway to use for ENS content resolution."
-  },
-  "invalidIpfsGateway": {
-    "message": "Invalid IPFS Gateway: The value must be a valid URL"
-  },
+  },  
   "forbiddenIpfsGateway": {
     "message": "Forbidden IPFS Gateway: Please specify a CID gateway"
   },
@@ -869,6 +1001,9 @@
   },
   "ledgerAccountRestriction": {
     "message": "You need to make use your last account before you can add a new one."
+  },
+  "legacyGasPricing": {
+    "message": "Legacy Gas Pricing"
   },
   "letsGoSetUp": {
     "message": "Yes, let’s get set up!"
@@ -901,7 +1036,7 @@
     "message": "Lock time is too great"
   },
   "mainnet": {
-    "message": "Main Ethereum Network"
+    "message": "Ethereum Mainnet"
   },
   "memorizePhrase": {
     "message": "Memorize this phrase."
@@ -913,7 +1048,7 @@
     "message": "Message"
   },
   "metaMaskConnectStatusParagraphOne": {
-    "message": "You now have more control over your account connections in MetaMask."
+    "message": "You now have more control over your account connections in GTx Wallet."
   },
   "metaMaskConnectStatusParagraphTwo": {
     "message": "The connection status button shows if the website you’re visiting is connected to your currently selected account."
@@ -922,10 +1057,10 @@
     "message": "Click it to manage your connected accounts."
   },
   "metamaskDescription": {
-    "message": "Connecting you to Ethereum and the Decentralized Web."
+    "message": "Connecting you to GNOTE, Theta, Ethereum and the Decentralized Web."
   },
   "metamaskVersion": {
-    "message": "MetaMask Version"
+    "message": "GTx Wallet Version"
   },
   "mobileSyncText": {
     "message": "Please enter your password to confirm it's you!"
@@ -933,24 +1068,35 @@
   "myAccounts": {
     "message": "My Accounts"
   },
+  "mismatchedChain": {
+    "message": "The network details for this chain ID do not match our records. We recommend that you $1 before proceeding.",
+    "description": "$1 is a clickable link with text defined by the 'mismatchedChainLinkText' key"
+  },
   "myWalletAccounts": {
     "message": "My Wallet Accounts"
   },
   "myWalletAccountsDescription": {
-    "message": "All of your MetaMask created accounts will automatically be added to this section."
+    "message": "All of your GTx Wallet created accounts will automatically be added to this section."
   },
   "mustSelectOne": {
     "message": "Must select at least 1 token."
   },
   "needEtherInWallet": {
-    "message": "To interact with decentralized applications using MetaMask, you’ll need Ether in your wallet."
+    "message": "To interact with most decentralized applications using GTx Wallet, you’ll need TFuel in your wallet."
+  },
+  "needHelp": {
+    "message": "Need help? Contact $1",
+    "description": "$1 represents `needHelpLinkText`, the text which goes in the help link"
+  },
+  "needHelpLinkText": {
+    "message": "GTx Wallet Support"
   },
   "needImportFile": {
     "message": "You must select a file to import.",
     "description": "User is important an account and needs to add a file to continue"
   },
   "negativeETH": {
-    "message": "Can not send negative amounts of ETH."
+    "message": "Can not send negative amounts of Native currency."
   },
   "networkName": {
     "message": "Network Name"
@@ -987,7 +1133,10 @@
     "message": "New Network"
   },
   "newToMetaMask": {
-    "message": "New to MetaMask?"
+    "message": "New to GTx Wallet?"
+  },
+  "NFTs": {
+    "message": "NFTs"
   },
   "noAlreadyHaveSeed": {
     "message": "No, I already have a seed phrase"
@@ -996,13 +1145,16 @@
     "message": "Protect Your Keys!"
   },
   "protectYourKeysMessage1": {
-    "message": "Be careful with your seed phrase — there have been reports of websites that attempt to imitate MetaMask. MetaMask will never ask for your seed phrase!"
+    "message": "Be careful with your seed phrase — there have been reports of websites that attempt to imitate wallets. GTx will never ask for your seed phrase!"
   },
   "protectYourKeysMessage2": {
-    "message": "Keep your phrase safe. If you see something fishy, or you’re uncertain about a website, email support@metamask.io"
+    "message": "Keep your phrase safe. If you see something fishy, or you’re uncertain about a website, email support@gtx.io"
   },
   "rpcUrl": {
     "message": "New RPC URL"
+  },
+  "onlyAvailableOnThetaNative": {
+    "message": "Only available on Theta Native MN"
   },
   "onlyConnectTrust": {
     "message": "Only connect with sites you trust."
@@ -1027,13 +1179,19 @@
   },
   "nextNonceWarning": {
     "message": "Nonce is higher than suggested nonce of $1",
-    "description": "The next nonce according to MetaMask's internal logic"
+    "description": "The next nonce according to GTx Wallet's internal logic"
   },
   "noAddressForName": {
     "message": "No address has been set for this name."
   },
   "noConversionRateAvailable": {
     "message": "No Conversion Rate Available"
+  },
+  "noStakes": {
+    "message": "You have no stakes"
+  },
+  "notAvailableOnThetaNative": {
+    "message": "Not available on Theta Native MN"
   },
   "noTransactions": {
     "message": "You have no transactions"
@@ -1065,20 +1223,20 @@
   "parameters": {
     "message": "Parameters"
   },
-  "participateInMetaMetrics": {
-    "message": "Participate in MetaMetrics"
-  },
-  "participateInMetaMetricsDescription": {
-    "message": "Participate in MetaMetrics to help us make MetaMask better"
-  },
   "password": {
     "message": "Password"
   },
-  "passwordsDontMatch": {
-    "message": "Passwords Don't Match"
-  },
   "passwordNotLongEnough": {
     "message": "Password not long enough"
+  },
+  "passwordSetupDetails": {
+    "message": "This password will unlock your GTx Wallet wallet only on this device. GTx Wallet can not recover this password."
+  },
+  "passwordTermsWarning": {
+    "message": "I understand that GTx Wallet cannot recover this password for me. $1"
+  },
+  "passwordsDontMatch": {
+    "message": "Passwords Don't Match"
   },
   "pastePrivateKey": {
     "message": "Paste your private key string here:",
@@ -1146,6 +1304,9 @@
   "recipientAddressPlaceholder": {
     "message": "Search, public address (0x), or ENS"
   },
+  "reject": {
+    "message": "Reject"
+  },
   "rejectAll": {
     "message": "Reject All"
   },
@@ -1176,11 +1337,20 @@
   "remindMeLater": {
     "message": "Remind me later"
   },
+  "restore": {
+    "message": "Restore"
+  },
+  "restoreUserData": {
+    "message": "Restore User Data"
+  },
   "restoreFromSeed": {
     "message": "Restore account?"
   },
   "restoreAccountWithSeed": {
     "message": "Restore your Account with Seed Phrase"
+  },
+  "restoreDataDescription": {
+    "message": "Load user preferences, networks, and tokens, but not wallets, from a local file"
   },
   "restoreWalletPreferences": {
     "message": "A backup of your data from $1 has been found. Would you like to restore your wallet preferences?",
@@ -1191,9 +1361,6 @@
   },
   "required": {
     "message": "Required"
-  },
-  "restore": {
-    "message": "Restore"
   },
   "revealSeedWords": {
     "message": "Reveal Seed Phrase"
@@ -1219,6 +1386,9 @@
   "removeAccountDescription": {
     "message": "This account will be removed from your wallet. Please make sure you have the original seed phrase or private key for this imported account before continuing. You can import or create accounts again from the account drop-down. "
   },
+  "removeStake": {
+    "message": "Remove stake"
+  },
   "readyToConnect": {
     "message": "Ready to Connect?"
   },
@@ -1230,6 +1400,9 @@
   },
   "goerli": {
     "message": "Goerli Test Network"
+  },
+  "guardianNode": {
+    "message": "Guardian Node"
   },
   "save": {
     "message": "Save"
@@ -1273,6 +1446,152 @@
   "securitySettingsDescription": {
     "message": "Privacy settings and wallet seed phrase"
   },
+
+  "seedPhraseIntroSidebarBulletFour": {
+    "message": "Write down and store in multiple secret places."
+  },
+  "seedPhraseIntroSidebarBulletOne": {
+    "message": "Save in a password manager"
+  },
+  "seedPhraseIntroSidebarBulletThree": {
+    "message": "Store in a safe-deposit box."
+  },
+  "seedPhraseIntroSidebarBulletTwo": {
+    "message": "Store in a bank vault."
+  },
+  "seedPhraseIntroSidebarCopyOne": {
+    "message": "Your recovery phrase is the “master key” to your wallet and funds."
+  },
+  "seedPhraseIntroSidebarCopyThree": {
+    "message": "If someone asks for your recovery phrase, they are most likely trying to scam you."
+  },
+  "seedPhraseIntroSidebarCopyTwo": {
+    "message": "Never, ever share your recovery phrase, even with GTx Wallet!"
+  },
+  "seedPhraseIntroSidebarTitleOne": {
+    "message": "What is a recovery phrase?"
+  },
+  "seedPhraseIntroSidebarTitleThree": {
+    "message": "Should I share my recovery phrase?"
+  },
+  "seedPhraseIntroSidebarTitleTwo": {
+    "message": "How do I save my recovery phrase?"
+  },
+  "seedPhraseIntroTitle": {
+    "message": "Secure your wallet"
+  },
+  "seedPhraseIntroTitleCopy": {
+    "message": "Before getting started, watch this short video to learn about your recovery phrase and how to keep your wallet safe."
+  },
+  "selectAHigherGasFee": {
+    "message": "Select a higher gas fee to accelerate the processing of your transaction.*"
+  },
+  "selectAll": {
+    "message": "Select all"
+  },
+  "selectAnAccount": {
+    "message": "Select an Account"
+  },
+  "selectAnAccountAlreadyConnected": {
+    "message": "This account has already been connected to MetaMask"
+  },
+  "selectAnAccountHelp": {
+    "message": "Select an account to view in GTx Wallet."
+  },
+  "selectEachPhrase": {
+    "message": "Please select each phrase in order to make sure it is correct."
+  },
+  "selectHdPath": {
+    "message": "Select HD Path"
+  },
+  "selectPathHelp": {
+    "message": "If you don't see your existing Ledger accounts below, try switching paths to \"Legacy (MEW / MyCrypto)\""
+  },
+  "selectType": {
+    "message": "Select Type"
+  },
+  "selectingAllWillAllow": {
+    "message": "Selecting all will allow this site to view all of your current accounts. Make sure you trust this site."
+  },
+  "sendAmount": {
+    "message": "Send Amount"
+  },
+  "show": {
+    "message": "Show"
+  },
+  "showFullTransactionDetails": {
+    "message": "Show full transaction details"
+  },
+  "showIncomingTransactionsDescription": {
+    "message": "Select this to use Etherscan to show incoming transactions in the transactions list"
+  },
+  "spendLimitInvalid": {
+    "message": "Spend limit invalid; must be a positive number"
+  },
+  "spendLimitPermission": {
+    "message": "Spend limit permission"
+  },
+  "spendLimitRequestedBy": {
+    "message": "Spend limit requested by $1",
+    "description": "Origin of the site requesting the spend limit"
+  },
+  "spendLimitTooLarge": {
+    "message": "Spend limit too large"
+  },
+  "stateLogFileName": {
+    "message": "GTx Wallet State Logs"
+  },
+  "stateLogs": {
+    "message": "State Logs"
+  },
+  "stateLogsDescription": {
+    "message": "State logs contain your public account addresses and sent transactions."
+  },
+  "statusConnected": {
+    "message": "Connected"
+  },
+  "statusNotConnected": {
+    "message": "Not connected"
+  },  
+  "step1LedgerWallet": {
+    "message": "Download Ledger app"
+  },
+  "step1LedgerWalletMsg": {
+    "message": "Download, set up, and enter your password to unlock $1.",
+    "description": "$1 represents the `ledgerLiveApp` localization value"
+  },
+  "step1TrezorWallet": {
+    "message": "Plug in Trezor wallet"
+  },
+  "step1TrezorWalletMsg": {
+    "message": "Connect your wallet directly to your computer. For more on using your hardware wallet device, $1",
+    "description": "$1 represents the `hardwareWalletSupportLinkConversion` localization key"
+  },
+  "step2LedgerWallet": {
+    "message": "Plug in Ledger wallet"
+  },
+  "step2LedgerWalletMsg": {
+    "message": "Connect your wallet directly to your computer.  Unlock your Ledger and open the Ethereum app. For more on using your hardware wallet device, $1.",
+    "description": "$1 represents the `hardwareWalletSupportLinkConversion` localization key"
+  },
+  "storePhrase": {
+    "message": "Store this phrase in a password manager like 1Password."
+  },
+  "submit": {
+    "message": "Submit"
+  },
+  "submitted": {
+    "message": "Submitted"
+  },
+  "support": {
+    "message": "Support"
+  },
+  "supportCenter": {
+    "message": "Visit our Support Center"
+  },  
+  "swap": {
+    "message": "Swap"
+  },
   "seedPhrasePlaceholder": {
     "message": "Separate each word with a single space"
   },
@@ -1282,29 +1601,20 @@
   "showSeedPhrase": {
     "message": "Show seed phrase"
   },
+  "swapNetworkFeeSummary": {
+    "message": "The network fee covers the cost of processing your swap and storing it on the $1 network. GTx Wallet does not profit from this fee."
+  },
   "seedPhraseReq": {
     "message": "Seed phrases contain 12, 15, 18, 21, or 24 words"
-  },
-  "selectingAllWillAllow": {
-    "message": "Selecting all will allow this site to view all of your current accounts. Make sure you trust this site."
   },
   "selectAccounts": {
     "message": "Select account(s)"
   },
-  "selectAll": {
-    "message": "Select all"
-  },
   "selectCurrency": {
     "message": "Select Currency"
   },
-  "selectEachPhrase": {
-    "message": "Please select each phrase in order to make sure it is correct."
-  },
   "selectLocale": {
     "message": "Select Locale"
-  },
-  "selectType": {
-    "message": "Select Type"
   },
   "buy": {
     "message": "Buy"
@@ -1312,20 +1622,17 @@
   "send": {
     "message": "Send"
   },
-  "sendAmount": {
-    "message": "Send Amount"
-  },
   "sendETH": {
-    "message": "Send ETH"
+    "message": "Send Currency"
   },
   "sendTokens": {
     "message": "Send Tokens"
   },
   "sentEther": {
-    "message": "sent ether"
+    "message": "send currency"
   },
   "sentTokens": {
-    "message": "sent tokens"
+    "message": "send tokens"
   },
   "sendSpecifiedTokens": {
     "message": "Send $1",
@@ -1343,23 +1650,11 @@
   "noAccountsFound": {
     "message": "No accounts found for the given search query"
   },
-  "selectAnAccount": {
-    "message": "Select an Account"
-  },
-  "selectAnAccountHelp": {
-    "message": "Select the account to view in MetaMask"
-  },
-  "selectAHigherGasFee": {
-    "message": "Select a higher gas fee to accelerate the processing of your transaction.*"
-  },
-  "selectHdPath": {
-    "message": "Select HD Path"
-  },
-  "selectPathHelp": {
-    "message": "If you don't see your existing Ledger accounts below, try switching paths to \"Legacy (MEW / MyCrypto)\""
-  },
   "settings": {
     "message": "Settings"
+  },
+  "shares": {
+    "message": "Shares"
   },
   "showAdvancedGasInline": {
     "message": "Advanced gas controls"
@@ -1403,6 +1698,12 @@
   "somethingWentWrong": {
     "message": "Oops! Something went wrong."
   },
+  "specifiedTokenStaking": {
+    "message": "$1 Staking"
+  },
+  "specifiedTokensStaked": {
+    "message": "$1 Staked"
+  },
   "speedUp": {
     "message": "Speed Up"
   },
@@ -1412,39 +1713,24 @@
   "speedUpTransaction": {
     "message": "Speed up this transaction"
   },
-  "spendLimitPermission": {
-    "message": "Spend limit permission"
-  },
-  "spendLimitRequestedBy": {
-    "message": "Spend limit requested by $1",
-    "description": "Origin of the site requesting the spend limit"
-  },
-  "spendLimitTooLarge": {
-    "message": "Spend limit too large"
-  },
-  "spendLimitInvalid": {
-    "message": "Spend limit invalid; must be a positive number"
-  },
   "switchNetworks": {
     "message": "Switch Networks"
   },
-  "stateLogFileName": {
-    "message": "MetaMask State Logs"
+  "stake": {
+    "message": "Stake"
   },
-  "stateLogs": {
-    "message": "State Logs"
+  "stakes": {
+    "message": "Stakes"
   },
-  "stateLogsDescription": {
-    "message": "State logs contain your public account addresses and sent transactions."
+  "staking": {
+    "message": "Staking"
+  },
+  "stakeToNode": {
+    "message": "Stake to $1",
+    "description": "$1 is node type such as 'een', 'guardianNode', 'validatorNode'"
   },
   "stateLogError": {
     "message": "Error in retrieving state logs."
-  },
-  "statusConnected": {
-    "message": "Connected"
-  },
-  "statusNotConnected": {
-    "message": "Not connected"
   },
   "step1HardwareWallet": {
     "message": "1. Connect Hardware Wallet"
@@ -1455,6 +1741,9 @@
   "step2HardwareWallet": {
     "message": "2. Select an Account"
   },
+  "switchEthereumChainConfirmationDescription": {
+    "message": "This will switch the selected network within GTx Wallet to a previously added network:"
+  },
   "step2HardwareWalletMsg": {
     "message": "Select the account you want to view. You can only choose one at a time."
   },
@@ -1463,18 +1752,6 @@
   },
   "step3HardwareWalletMsg": {
     "message": "Use your hardware account like you would with any Ethereum account. Connect to web3 sites, send ETH, buy and store ERC20 tokens and non-fungible tokens like CryptoKitties."
-  },
-  "storePhrase": {
-    "message": "Store this phrase in a password manager like 1Password."
-  },
-  "submit": {
-    "message": "Submit"
-  },
-  "submitted": {
-    "message": "Submitted"
-  },
-  "supportCenter": {
-    "message": "Visit our Support Center"
   },
   "symbol": {
     "message": "Symbol"
@@ -1497,26 +1774,34 @@
   "syncWithMobileTitle": {
     "message": "Sync with mobile"
   },
-  "syncWithMobileDesc": {
-    "message": "You can sync your accounts and information with your mobile device. Open the MetaMask mobile app, go to \"Settings\" and tap on \"Sync from Browser Extension\""
-  },
-  "syncWithMobileDescNewUsers": {
-    "message": "If you just open the MetaMask Mobile app for the first time, just follow the steps in your phone."
-  },
-  "syncWithMobileScanThisCode": {
-    "message": "Scan this code with your MetaMask mobile app"
-  },
   "syncWithMobileBeCareful": {
     "message": "Make sure nobody else is looking at your screen when you scan this code"
   },
   "syncWithMobileComplete": {
-    "message": "Your data has been synced successfully. Enjoy the MetaMask mobile app!"
+    "message": "Your data has been synced successfully. Enjoy the GTx Wallet mobile app!"
+  },
+  "syncWithMobileDesc": {
+    "message": "You can sync your accounts and information with your mobile device. Open the GTx Wallet mobile app, go to \"Settings\" and tap on \"Sync from Browser Extension\""
+  },
+  "syncWithMobileDescNewUsers": {
+    "message": "If you just open the GTx Wallet Mobile app for the first time, just follow the steps in your phone."
+  },
+  "syncWithMobileScanThisCode": {
+    "message": "Scan this code with your GTx Wallet mobile app"
   },
   "terms": {
     "message": "Terms of Use"
   },
   "testFaucet": {
     "message": "Test Faucet"
+  },
+  "theta_mainnet": {
+    "message": "Theta Native MN",
+    "description": "Theta Native Mainnet (thetajs / theta-rpc)"
+  },
+  "theta_sc": {
+    "message": "Theta SC MN",
+    "description": "Theta Smart Contract Mainnet (eth adapter)"
   },
   "thisWillCreate": {
     "message": "This will create a new wallet and seed phrase"
@@ -1530,6 +1815,22 @@
   "toAddress": {
     "message": "To: $1",
     "description": "$1 is the address to include in the To label. It is typically shortened first using shortenAddress"
+  },
+  "toEen": {
+    "message": "EEN: $1",
+    "description": "Edgenode abbreviated label with address at $1"
+  },
+  "toGuardian": {
+    "message": "Guardian: $1",
+    "description": "Guardian label with address at $1"
+  },
+  "toHolder": {
+    "message": "Holder: $1",
+    "description": "$1 is the address to include in the Holder label. It is typically shortened first using shortenAddress"
+  },
+  "toValidator": {
+    "message": "Validator: $1",
+    "description": "Validator label with address at $1"
   },
   "toWithColon": {
     "message": "To:"
@@ -1591,11 +1892,18 @@
   "transactionFee": {
     "message": "Transaction Fee"
   },
+  "transactions": {
+    "message": "Transactions"
+  },
   "transactionTime": {
     "message": "Transaction Time"
   },
+  "trustContractApprovePermission": {
+    "message": "Do you trust this contract? By granting this permission, you’re allowing $1 to withdraw your $2 and automate transactions for you.",
+    "description": "$1 is the contract name requesting permission and $2 is the symbol of the currency that the request is for"
+  },
   "showTransactionTimeDescription": {
-    "message": "Select this to display pending transaction time estimates in the activity tab while on the Main Ethereum Network. Note: estimates are approximations based on network conditions."
+    "message": "Select this to display pending transaction time estimates in the activity tab while on the Ethereum Mainnet. Note: estimates are approximations based on network conditions."
   },
   "transfer": {
     "message": "Transfer"
@@ -1604,6 +1912,9 @@
     "message": "Transfer between my accounts"
   },
   "transferFrom": {
+    "message": "Transfer From"
+  },
+  "transferfrom": {
     "message": "Transfer From"
   },
   "troubleTokenBalances": {
@@ -1617,9 +1928,12 @@
   "tryAgain": {
     "message": "Try again"
   },
-  "typePassword": {
-    "message": "Type your MetaMask password"
+  "type": {
+    "message": "Type"
   },
+  "typePassword": {
+    "message": "Type your GTx Wallet password"
+  },  
   "unapproved": {
     "message": "Unapproved"
   },
@@ -1650,8 +1964,26 @@
   "unlock": {
     "message": "Unlock"
   },
+  "unlockAtBlock": {
+    "message": "Unlock Block: $1",
+    "description": "$1 is block height at which stake in cooldown will be returned"
+  },
   "unlockMessage": {
     "message": "The decentralized web awaits"
+  },
+  "unstake": {
+    "message": "Unstake"
+  },
+  "unstakeFromNode": {
+    "message": "Unstake from $1",
+    "description": "$1 is node type such as 'een', 'guardianNode', 'validatorNode'"
+  },
+  "unwrap":{
+    "message": "Unwrap"
+  },
+  "unwrapSpecifiedTokens": {
+    "message": "Unwrap $1",
+    "description": "Symbol of the specified token"
   },
   "updatedWithDate": {
     "message": "Updated $1"
@@ -1674,10 +2006,13 @@
   "userName": {
     "message": "Username"
   },
+  "validatorNode": {
+    "message": "Validator Node"
+  },
   "viewAccount": {
     "message": "View Account"
   },
-  "viewinExplorer": {
+  "viewInExplorer": {
     "message": "View in Explorer"
   },
   "viewContact": {
@@ -1689,8 +2024,17 @@
   "viewOnEtherscan": {
     "message": "View on Etherscan"
   },
+  "retry": {
+    "message": "Retry"
+  },
   "retryTransaction": {
     "message": "Retry Transaction"
+  },
+  "viewOnThetaExplorer": {
+    "message": "View on Theta Explorer"
+  },
+  "viewOnThetaScan": {
+    "message": "View on ThetaScan"
   },
   "visitWebSite": {
     "message": "Visit our web site"
@@ -1698,14 +2042,32 @@
   "walletSeed": {
     "message": "Seed phrase"
   },
+  "web3ShimUsageNotification": {
+    "message": "We noticed that the current website tried to use the removed window.web3 API. If the site appears to be broken, please click $1 for more information.",
+    "description": "$1 is a clickable link."
+  },
+  "welcome": {
+    "message": "Welcome to GTx Wallet"
+  },
   "welcomeBack": {
     "message": "Welcome Back!"
   },
-  "welcome": {
-    "message": "Welcome to MetaMask"
+  "whatsNew": {
+    "message": "What's new",
+    "description": "This is the title of a popup that gives users notifications about new features and updates to GTx Wallet."
   },
   "whatsThis": {
     "message": "What's this?"
+  },
+  "wrap":{
+    "message": "Wrap"
+  },
+  "wrapping":{
+    "message": "Wrapping"
+  },
+  "wrapSpecifiedTokens": {
+    "message": "Wrap $1",
+    "description": "Symbol of the specified token"
   },
   "writePhrase": {
     "message": "Write this phrase on a piece of paper and store in a secure location. If you want even more security, write it down on multiple pieces of paper and store each in 2 - 3 different locations."

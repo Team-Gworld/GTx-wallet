@@ -1,5 +1,19 @@
 version: 2.1
 
+executors:
+  node-browsers:
+    docker:
+      - image: circleci/node:14-browsers
+  node-browsers-medium-plus:
+    docker:
+      - image: circleci/node:14-browsers
+    resource_class: medium+
+    environment:
+      NODE_OPTIONS: --max_old_space_size=2048
+  shellcheck:
+    docker:
+      - image: koalaman/shellcheck-alpine@sha256:35882cba254810c7de458528011e935ba2c4f3ebcb224275dfa7ebfa930ef294
+
 workflows:
   test_and_release:
     jobs:
@@ -10,6 +24,13 @@ workflows:
                 - /^Version-v(\d+)[.](\d+)[.](\d+)/
       - prep-deps
       - test-deps
+      - validate-lavamoat-config:
+          filters:
+            branches:
+              only:
+                - /^Version-v(\d+)[.](\d+)[.](\d+)|master/
+          requires:
+            - prep-deps
       - prep-build:
           requires:
             - prep-deps
@@ -47,6 +68,7 @@ workflows:
             - prep-build
       - all-tests-pass:
           requires:
+            - validate-lavamoat-config
             - test-lint
             - test-lint-shellcheck
             - test-lint-lockfile
@@ -85,8 +107,7 @@ workflows:
 
 jobs:
   create_release_pull_request:
-    docker:
-      - image: circleci/node@sha256:e16740707de2ebed45c05d507f33ef204902349c7356d720610b5ec6a35d3d88
+    executor: node-browsers
     steps:
       - checkout
       - run:
@@ -97,8 +118,7 @@ jobs:
             .circleci/scripts/release-create-release-pr
 
   prep-deps:
-    docker:
-      - image: circleci/node@sha256:e16740707de2ebed45c05d507f33ef204902349c7356d720610b5ec6a35d3d88
+    executor: node-browsers
     steps:
       - checkout
       - run:
@@ -115,9 +135,25 @@ jobs:
           - node_modules
           - build-artifacts
 
+  validate-lavamoat-config:
+    executor: node-browsers
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: Validate allow-scripts config
+          command: |
+            .circleci/scripts/validate-allow-scripts.sh
+      - run:
+          name: Validate LavaMoat policy
+          command: |
+            .circleci/scripts/validate-lavamoat-policy.sh
+
   prep-build:
-    docker:
-      - image: circleci/node@sha256:e16740707de2ebed45c05d507f33ef204902349c7356d720610b5ec6a35d3d88
+    executor: node-browsers
+    environment:
+      NODE_OPTIONS: --max_old_space_size=1536
     steps:
       - checkout
       - attach_workspace:
@@ -135,8 +171,9 @@ jobs:
             - builds
 
   prep-build-test:
-    docker:
-      - image: circleci/node@sha256:e16740707de2ebed45c05d507f33ef204902349c7356d720610b5ec6a35d3d88
+    executor: node-browsers
+    environment:
+      NODE_OPTIONS: --max_old_space_size=1536
     steps:
       - checkout
       - attach_workspace:
@@ -153,8 +190,7 @@ jobs:
             - dist-test
 
   prep-build-storybook:
-    docker:
-      - image: circleci/node@sha256:e16740707de2ebed45c05d507f33ef204902349c7356d720610b5ec6a35d3d88
+    executor: node-browsers
     steps:
       - checkout
       - attach_workspace:
@@ -168,8 +204,7 @@ jobs:
             - .out
 
   test-lint:
-    docker:
-      - image: circleci/node@sha256:e16740707de2ebed45c05d507f33ef204902349c7356d720610b5ec6a35d3d88
+    executor: node-browsers
     steps:
       - checkout
       - attach_workspace:
@@ -183,17 +218,16 @@ jobs:
 
   test-lint-shellcheck:
     docker:
-      - image: koalaman/shellcheck-alpine@sha256:169a51b086af0ab181e32801c15deb78944bb433d4f2c0a21cc30d4e60547065
+      - image: koalaman/shellcheck-alpine@sha256:35882cba254810c7de458528011e935ba2c4f3ebcb224275dfa7ebfa930ef294
     steps:
       - checkout
       - run: apk add --no-cache bash jq yarn
       - run:
-          name: Shellcheck Lint
-          command: yarn lint:shellcheck
+          name: ShellCheck Lint
+          command: ./development/shellcheck.sh
 
   test-lint-lockfile:
-    docker:
-      - image: circleci/node@sha256:e16740707de2ebed45c05d507f33ef204902349c7356d720610b5ec6a35d3d88
+    executor: node-browsers
     steps:
       - checkout
       - attach_workspace:
@@ -203,8 +237,7 @@ jobs:
           command: yarn lint:lockfile
 
   test-deps:
-    docker:
-      - image: circleci/node@sha256:e16740707de2ebed45c05d507f33ef204902349c7356d720610b5ec6a35d3d88
+    executor: node-browsers
     steps:
       - checkout
       - attach_workspace:
@@ -214,10 +247,12 @@ jobs:
           command: .circleci/scripts/yarn-audit
 
   test-e2e-chrome:
-    docker:
-      - image: circleci/node@sha256:e16740707de2ebed45c05d507f33ef204902349c7356d720610b5ec6a35d3d88
+    executor: node-browsers
     steps:
       - checkout
+      - run:
+          name: Re-Install Chrome
+          command: ./.circleci/scripts/chrome-install.sh
       - attach_workspace:
           at: .
       - run:
@@ -225,15 +260,45 @@ jobs:
           command: mv ./dist-test ./dist
       - run:
           name: test:e2e:chrome
-          command: yarn test:e2e:chrome
+          command: |
+            if .circleci/scripts/test-run-e2e
+            then
+              yarn test:e2e:chrome
+            fi
+          no_output_timeout: 20m
+      - store_artifacts:
+          path: test-artifacts
+          destination: test-artifacts
+
+  test-e2e-chrome-metrics:
+    executor: node-browsers
+    steps:
+      - checkout
+      - run:
+          name: Re-Install Chrome
+          command: ./.circleci/scripts/chrome-install.sh
+      - attach_workspace:
+          at: .
+      - run:
+          name: Move test build to dist
+          command: mv ./dist-test-metrics ./dist
+      - run:
+          name: Move test zips to builds
+          command: mv ./builds-test-metrics ./builds
+      - run:
+          name: test:e2e:chrome:metrics
+          command: |
+            if .circleci/scripts/test-run-e2e
+            then
+              yarn test:e2e:chrome:metrics
+            fi
           no_output_timeout: 20m
       - store_artifacts:
           path: test-artifacts
           destination: test-artifacts
 
   test-e2e-firefox:
-    docker:
-      - image: circleci/node@sha256:e16740707de2ebed45c05d507f33ef204902349c7356d720610b5ec6a35d3d88
+    executor: node-browsers
     steps:
       - checkout
       - run:
@@ -253,10 +318,12 @@ jobs:
           destination: test-artifacts
 
   benchmark:
-    docker:
-      - image: circleci/node@sha256:e16740707de2ebed45c05d507f33ef204902349c7356d720610b5ec6a35d3d88
+    executor: node-browsers
     steps:
       - checkout
+      - run:
+          name: Re-Install Chrome
+          command: ./.circleci/scripts/chrome-install.sh
       - attach_workspace:
           at: .
       - run:
@@ -274,8 +341,7 @@ jobs:
             - test-artifacts
 
   job-publish-prerelease:
-    docker:
-      - image: circleci/node@sha256:e16740707de2ebed45c05d507f33ef204902349c7356d720610b5ec6a35d3d88
+    executor: node-browsers
     steps:
       - checkout
       - attach_workspace:
@@ -292,10 +358,12 @@ jobs:
       - store_artifacts:
           path: test-artifacts
           destination: test-artifacts
-      # important: generate sesify viz AFTER uploading builds as artifacts
+      # important: generate lavamoat viz AFTER uploading builds as artifacts
+      # Temporarily disabled until we can update to a version of `sesify` with
+      # this fix included: https://github.com/LavaMoat/LavaMoat/pull/121
       - run:
-          name: build:sesify-viz
-          command: ./.circleci/scripts/create-sesify-viz
+          name: build:lavamoat-viz
+          command: ./.circleci/scripts/create-lavamoat-viz
       - store_artifacts:
           path: build-artifacts
           destination: build-artifacts
@@ -304,8 +372,7 @@ jobs:
           command: ./development/metamaskbot-build-announce.js
 
   job-publish-release:
-    docker:
-      - image: circleci/node@sha256:e16740707de2ebed45c05d507f33ef204902349c7356d720610b5ec6a35d3d88
+    executor: node-browsers
     steps:
       - checkout
       - attach_workspace:
@@ -322,8 +389,7 @@ jobs:
           command: .circleci/scripts/release-create-master-pr
 
   job-publish-storybook:
-    docker:
-      - image: circleci/node@sha256:e16740707de2ebed45c05d507f33ef204902349c7356d720610b5ec6a35d3d88
+    executor: node-browsers
     steps:
       - add_ssh_keys:
           fingerprints:
@@ -338,8 +404,7 @@ jobs:
             yarn storybook:deploy
 
   test-unit:
-    docker:
-      - image: circleci/node@sha256:e16740707de2ebed45c05d507f33ef204902349c7356d720610b5ec6a35d3d88
+    executor: node-browsers
     steps:
       - checkout
       - attach_workspace:
@@ -353,8 +418,7 @@ jobs:
             - .nyc_output
             - coverage
   test-unit-global:
-    docker:
-      - image: circleci/node@sha256:e16740707de2ebed45c05d507f33ef204902349c7356d720610b5ec6a35d3d88
+    executor: node-browsers
     steps:
       - checkout
       - attach_workspace:
@@ -364,8 +428,7 @@ jobs:
           command: yarn test:unit:global
 
   validate-source-maps:
-    docker:
-      - image: circleci/node@sha256:e16740707de2ebed45c05d507f33ef204902349c7356d720610b5ec6a35d3d88
+    executor: node-browsers
     steps:
       - checkout
       - attach_workspace:
@@ -375,8 +438,7 @@ jobs:
           command: yarn validate-source-maps
 
   test-mozilla-lint:
-    docker:
-      - image: circleci/node@sha256:e16740707de2ebed45c05d507f33ef204902349c7356d720610b5ec6a35d3d88
+    executor: node-browsers
     steps:
       - checkout
       - attach_workspace:
@@ -386,16 +448,14 @@ jobs:
           command: NODE_OPTIONS=--max_old_space_size=3072 yarn mozilla-lint
 
   all-tests-pass:
-    docker:
-      - image: circleci/node@sha256:e16740707de2ebed45c05d507f33ef204902349c7356d720610b5ec6a35d3d88
+    executor: node-browsers
     steps:
       - run:
           name: All Tests Passed
           command: echo 'weew - everything passed!'
 
   coveralls-upload:
-    docker:
-      - image: circleci/node@sha256:e16740707de2ebed45c05d507f33ef204902349c7356d720610b5ec6a35d3d88
+    executor: node-browsers
     steps:
       - checkout
       - attach_workspace:

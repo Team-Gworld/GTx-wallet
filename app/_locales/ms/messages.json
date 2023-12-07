@@ -72,17 +72,17 @@
     "message": "Tambah Token yang Disyorkan"
   },
   "addAcquiredTokens": {
-    "message": "Tambah token yang anda peroleh menggunakan MetaMask"
+    "message": "Tambah token yang anda peroleh menggunakan GTx"
   },
   "amount": {
     "message": "Jumlah"
   },
   "appDescription": {
-    "message": "Dompat Ethereum di Pelayar anda",
+    "message": "Dompat Theta / GNOTE / Ethereum di Pelayar anda",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "GTx Wallet",
     "description": "The name of the application"
   },
   "approve": {
@@ -110,7 +110,7 @@
     "message": "Pemasa Logout Automatik (minit)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Tetapkan masa melahu dalam minit sebelum MetaMask log keluar secara automatik"
+    "message": "Tetapkan masa melahu dalam minit sebelum GTx log keluar secara automatik"
   },
   "average": {
     "message": "Purata"
@@ -125,7 +125,7 @@
     "message": "Sandarkan kod Pemulihan Rahsia anda untuk memastikan dompet dan dana anda sentiasa selamat."
   },
   "backupApprovalInfo": {
-    "message": "Kod rahsia ini diperlukan untuk memulihkan dompet anda sekiranya anda kehilangan peranti anda, terlupa kata laluan anda, perlu memasang semua MetaMask, atau mahu mengakses dompet anda menggunakan peranti lain."
+    "message": "Kod rahsia ini diperlukan untuk memulihkan dompet anda sekiranya anda kehilangan peranti anda, terlupa kata laluan anda, perlu memasang semua GTx, atau mahu mengakses dompet anda menggunakan peranti lain."
   },
   "backupNow": {
     "message": "Buat sandaran sekarang"
@@ -151,15 +151,12 @@
   },
   "browserNotSupported": {
     "message": "Pelayar anda tidak disokong..."
-  },
-  "builtInCalifornia": {
-    "message": "MetaMask direka dan dibina di California."
-  },
+  },  
   "buyWithWyre": {
     "message": "Beli ETH dengan Wyre"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre membolehkan anda menggunakan kad kredit untuk mendeposit ETH secara terus ke dalam akaun MetaMask anda."
+    "message": "Wyre membolehkan anda menggunakan kad kredit untuk mendeposit ETH secara terus ke dalam akaun GTx anda."
   },
   "buyCoinSwitch": {
     "message": "Beli di CoinSwitch"
@@ -201,7 +198,7 @@
     "message": "Tutup"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "Anda perlu menggunakan MetaMask di Google Chrome untuk menyambung kepada Dompet Perkakasan anda."
+    "message": "Anda perlu menggunakan GTx di Google Chrome untuk menyambung kepada Dompet Perkakasan anda."
   },
   "confirm": {
     "message": "Sahkan"
@@ -235,6 +232,9 @@
   },
   "connectingToRopsten": {
     "message": "Menyambungkan kepada Rangkaian Ujian Ropsten"
+  },
+  "connectingToThetaMainnet": {
+    "message": "Menyambung kepada Rangkaian Theta Utama"
   },
   "connectingToRinkeby": {
     "message": "Menyambung kepada Rangkaian Ujian Rinkeby"
@@ -360,16 +360,16 @@
     "message": "Jangan sesekali kongsi frasa ini dengan sesiapa."
   },
   "endOfFlowMessage5": {
-    "message": "Berhati-hati dengan pemancingan data! MetaMask tidak akan sesekali meminta frasa benih anda secara tiba-tiba."
+    "message": "Berhati-hati dengan pemancingan data! GTx tidak akan sesekali meminta frasa benih anda secara tiba-tiba."
   },
   "endOfFlowMessage6": {
     "message": "Jika anda perlu membuat sandaran ungkapan benih anda sekali lagi, anda boleh lakukannya melalui Tetapan -> Keselamatan."
   },
   "endOfFlowMessage7": {
-    "message": "JIka anda mempunyai soalan atau melihat sesuatu yang mencurigakan, hantarkan e-mel ke support@metamask.io."
+    "message": "JIka anda mempunyai soalan atau melihat sesuatu yang mencurigakan, hantarkan e-mel ke support@gtx.io."
   },
   "endOfFlowMessage8": {
-    "message": "MetaMask tidak dapat memulihkan ungkapan benih anda. Ketahui lebih lanjut."
+    "message": "GTx tidak dapat memulihkan ungkapan benih anda. Ketahui lebih lanjut."
   },
   "endOfFlowMessage9": {
     "message": "Ketahui lebih lanjut."
@@ -485,7 +485,7 @@
     "message": "Sambungkan dompet perkakasan"
   },
   "hardwareWalletsMsg": {
-    "message": "Pilih dompet perkakasan yang anda ingin gunakan dengan MetaMask"
+    "message": "Pilih dompet perkakasan yang anda ingin gunakan dengan GTx"
   },
   "havingTroubleConnecting": {
     "message": "Mengalami masalah untuk menyambungkan?"
@@ -510,7 +510,7 @@
     "message": "Import Akaun"
   },
   "importAccountMsg": {
-    "message": "Akaun yang diimport tidak akan dikaitkan dengan frasa benih akaun MetaMask asal yang anda cipta. Ketahui lebih lanjut tentang akaun import"
+    "message": "Akaun yang diimport tidak akan dikaitkan dengan frasa benih akaun GTx asal yang anda cipta. Ketahui lebih lanjut tentang akaun import"
   },
   "importAccountSeedPhrase": {
     "message": "Import Akaun dengan Frasa Benih"
@@ -620,7 +620,7 @@
     "message": "Menyambungkan anda kepada Ethereum dan Web Ternyahpusat."
   },
   "metamaskVersion": {
-    "message": "Versi MetaMask"
+    "message": "Versi GTx"
   },
   "mobileSyncText": {
     "message": "Sila masukkan kata laluan anda untuk mengesahkan ini memang anda!"
@@ -632,13 +632,13 @@
     "message": "Akaun Dompet Saya"
   },
   "myWalletAccountsDescription": {
-    "message": "Semua akaun ciptaan MetaMask anda akan ditambahkan secara automatik kepada bahagian ini."
+    "message": "Semua akaun ciptaan GTx anda akan ditambahkan secara automatik kepada bahagian ini."
   },
   "mustSelectOne": {
     "message": "Mesti memilih sekurang-kurangnya 1 token."
   },
   "needEtherInWallet": {
-    "message": "Untuk berinteraksi dengan aplikasi ternyahpusat menggunakan MetaMask, anda memerlukan Ether di dalam dompet anda."
+    "message": "Untuk berinteraksi dengan aplikasi ternyahpusat menggunakan GTx, anda memerlukan Ether di dalam dompet anda."
   },
   "needImportFile": {
     "message": "Anda mesti pilih fail untuk diimport.",
@@ -682,7 +682,7 @@
     "message": "Rangkaian Baru"
   },
   "newToMetaMask": {
-    "message": "Baru mengenali MetaMask?"
+    "message": "Baru mengenali GTx?"
   },
   "noAlreadyHaveSeed": {
     "message": "Tidak, saya sudah pun memiliki frasa benih"
@@ -691,10 +691,10 @@
     "message": "Lindungi Kunci Anda!"
   },
   "protectYourKeysMessage1": {
-    "message": "Berhati-hati dengan ungkapan benih anda — terdapat laporan ada tapak web yang cuba meniru MetaMask. MetaMask tidak sekali-kali akan meminta ungkapan benih anda!"
+    "message": "Berhati-hati dengan ungkapan benih anda — terdapat laporan ada tapak web yang cuba meniru GTx. GTx tidak sekali-kali akan meminta ungkapan benih anda!"
   },
   "protectYourKeysMessage2": {
-    "message": "Pastikan ungkapan anda selamat. Jika anda melihterlihat at sesuatu yang mencurigakan, atau anda tidak pasti mengenai tapak web tertentu, e-mel kepada support@metamask.io"
+    "message": "Pastikan ungkapan anda selamat. Jika anda melihterlihat at sesuatu yang mencurigakan, atau anda tidak pasti mengenai tapak web tertentu, e-mel kepada support@gtx.io"
   },
   "rpcUrl": {
     "message": "URL RPC baru"
@@ -743,12 +743,6 @@
   },
   "parameters": {
     "message": "Parameter"
-  },
-  "participateInMetaMetrics": {
-    "message": "Sertai MetaMetrics"
-  },
-  "participateInMetaMetricsDescription": {
-    "message": "Sertai MetaMetrics untuk membantu kami menambah baik MetaMask"
   },
   "password": {
     "message": "Kata laluan"
@@ -960,7 +954,7 @@
     "message": "Hantar Token"
   },
   "sentEther": {
-    "message": "menghantar ether"
+    "message": "menghantar"
   },
   "sentTokens": {
     "message": "token dihantar"
@@ -975,7 +969,7 @@
     "message": "Pilih Akaun"
   },
   "selectAnAccountHelp": {
-    "message": "Pilih akaun untuk dilihat dalam MetaMask"
+    "message": "Pilih akaun untuk dilihat dalam GTx"
   },
   "selectAHigherGasFee": {
     "message": "Pilih yuran gas yang lebih tinggi untuk mempercepatkan pemprosesan transaksi anda.*"
@@ -1089,19 +1083,19 @@
     "message": "Segerakkan dengan mudah alih"
   },
   "syncWithMobileDesc": {
-    "message": "Anda boleh menyegerakkan akaun dan maklumat anda dengan peranti mudah alih anda. Buka ap mudah alih MetaMask, pergi ke \"Tetapan\" dan ketik \"Segerakkan daripada Sambungan Pelayar\""
+    "message": "Anda boleh menyegerakkan akaun dan maklumat anda dengan peranti mudah alih anda. Buka ap mudah alih GTx, pergi ke \"Tetapan\" dan ketik \"Segerakkan daripada Sambungan Pelayar\""
   },
   "syncWithMobileDescNewUsers": {
-    "message": "Jika ini kali pertama anda membuka aplikasi mudah alih MetaMask, anda cuma perlu ikuti langkah-langkah di telefon anda."
+    "message": "Jika ini kali pertama anda membuka aplikasi mudah alih GTx, anda cuma perlu ikuti langkah-langkah di telefon anda."
   },
   "syncWithMobileScanThisCode": {
-    "message": "Imbas kod ini dengan aplikasi mudah alih MetaMask anda"
+    "message": "Imbas kod ini dengan aplikasi mudah alih GTx anda"
   },
   "syncWithMobileBeCareful": {
     "message": "Pastikan tiada orang lain melihat skrin anda ketika anda mengimbas kod ini"
   },
   "syncWithMobileComplete": {
-    "message": "Data anda berjaya disegerakkan. Nikmati aplikasi mudah alih MetaMask!"
+    "message": "Data anda berjaya disegerakkan. Nikmati aplikasi mudah alih GTx!"
   },
   "terms": {
     "message": "Syarat-syarat Penggunaan"
@@ -1181,6 +1175,9 @@
   "transferFrom": {
     "message": "Pindah Daripada"
   },
+  "transferfrom": {
+    "message": "Pindah Daripada"
+  },
   "troubleTokenBalances": {
     "message": "Kami menghadapi masalah memuatkan baki token anda. Anda boleh melihatnya",
     "description": "Followed by a link (here) to view token balances"
@@ -1189,7 +1186,7 @@
     "message": "Cuba lagi"
   },
   "typePassword": {
-    "message": "Taip kata laluan MetaMask anda"
+    "message": "Taip kata laluan GTx anda"
   },
   "unapproved": {
     "message": "Belum Diluluskan"
@@ -1233,7 +1230,7 @@
   "viewAccount": {
     "message": "Paparkan Akaun"
   },
-  "viewinExplorer": {
+  "viewInExplorer": {
     "message": "Lihat di Explorer"
   },
   "viewContact": {
@@ -1255,7 +1252,7 @@
     "message": "Selamat Kembali!"
   },
   "welcome": {
-    "message": "Selamat datang ke MetaMask"
+    "message": "Selamat datang ke GTx"
   },
   "writePhrase": {
     "message": "Tulis frasa ini di atas kertas dan simpan di tempat yang selamat. JIka anda mahu lebih selamat, tuliskannya di beberapa helai kertas dan simpan setiap satunya di 2 -3 lokasi berbeza."

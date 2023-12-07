@@ -1,0 +1,12 @@
+diff --git a/node_modules/@babel/core/lib/index.js b/node_modules/@babel/core/lib/index.js
+index 3e11437..b4cbb42 100644
+--- a/node_modules/@babel/core/lib/index.js
++++ b/node_modules/@babel/core/lib/index.js
+@@ -222,7 +222,6 @@ var _transform = require("./transform.js");
+ var _transformFile = require("./transform-file.js");
+ var _transformAst = require("./transform-ast.js");
+ var _parse = require("./parse.js");
+-var thisFile = require("./index.js");
+ ;
+ const version = exports.version = "7.23.3";
+ const DEFAULT_EXTENSIONS = exports.DEFAULT_EXTENSIONS = Object.freeze([".js", ".jsx", ".es6", ".es", ".mjs", ".cjs"]);

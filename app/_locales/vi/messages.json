@@ -18,15 +18,40 @@
     "message": "Số lượng"
   },
   "appDescription": {
-    "message": "Tính năng Ethereum cho trình duyệt",
+    "message": "Tính năng Theta / GNOTE / Ethereum cho trình duyệt",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "GTx Wallet",
     "description": "The name of the application"
   },
   "approve": {
     "message": "Phê duyệt"
+  },
+  "approveSpendLimit": {
+    "message": "Phê duyệt giới hạn chi tiêu $1",
+    "description": "The token symbol that is being approved"
+  },
+  "approved": {
+    "message": "Đã phê duyệt"
+  },
+  "asset": {
+    "message": "Tài sản"
+  },
+  "assetOptions": {
+    "message": "Tùy chọn tài sản"
+  },
+  "assets": {
+    "message": "Tài sản"
+  },
+  "NFTs": {
+    "message": "NFTs"
+  },
+  "attemptToCancel": {
+    "message": "Cố gắng hủy?"
+  },
+  "attemptToCancelDescription": {
+    "message": "Việc gửi lần thử này không đảm bảo rằng giao dịch gốc của bạn sẽ được hủy. Nếu lần hủy này thành công, bạn sẽ chịu phí giao dịch nêu ở trên."
   },
   "attemptingConnect": {
     "message": "Đang kết nối đến blockchain."
@@ -54,6 +79,125 @@
   },
   "continueToCoinSwitch": {
     "message": "Tiếp tục đến CoinSwitch"
+  },
+  "confirmSecretBackupPhrase": {
+    "message": "Xác nhận Cụm mật khẩu sao lưu bí mật"
+  },
+  "confirmed": {
+    "message": "Đã xác nhận"
+  },
+  "confusableUnicode": {
+    "message": "“$1” tương tự với “$2”."
+  },
+  "confusableZeroWidthUnicode": {
+    "message": "Tìm thấy ký tự có độ rộng bằng 0."
+  },
+  "confusingEnsDomain": {
+    "message": "Chúng tôi đã phát hiện thấy một ký tự có thể gây nhầm lẫn trong tên ENS. Hãy kiểm tra tên ENS để tránh khả năng bị lừa đảo."
+  },
+  "congratulations": {
+    "message": "Chúc mừng bạn"
+  },
+  "connect": {
+    "message": "Kết nối"
+  },
+  "connectAccountOrCreate": {
+    "message": "Kết nối tài khoản hoặc tạo tài khoản mới"
+  },
+  "connectHardwareWallet": {
+    "message": "Kết nối với ví cứng"
+  },
+  "connectManually": {
+    "message": "Kết nối thủ công với trang web hiện tại"
+  },
+  "connectTo": {
+    "message": "Kết nối với $1",
+    "description": "$1 is the name/origin of a web3 site/application that the user can connect to metamask"
+  },
+  "connectToAll": {
+    "message": "Kết nối với tất cả các $1 của bạn",
+    "description": "$1 will be replaced by the translation of connectToAllAccounts"
+  },
+  "connectToAllAccounts": {
+    "message": "tài khoản",
+    "description": "will replace $1 in connectToAll, completing the sentence 'connect to all of your accounts', will be text that shows list of accounts on hover"
+  },
+  "connectToMultiple": {
+    "message": "Kết nối với $1",
+    "description": "$1 will be replaced by the translation of connectToMultipleNumberOfAccounts"
+  },
+  "connectToMultipleNumberOfAccounts": {
+    "message": "$1 tài khoản",
+    "description": "$1 is the number of accounts to which the web3 site/application is asking to connect; this will substitute $1 in connectToMultiple"
+  },
+  "connectWithMetaMask": {
+    "message": "Kết nối với GTx"
+  },
+  "connectedAccountsDescriptionPlural": {
+    "message": "Bạn có $1 tài khoản kết nối với trang web này.",
+    "description": "$1 is the number of accounts"
+  },
+  "connectedAccountsDescriptionSingular": {
+    "message": "Bạn có 1 tài khoản kết nối với trang web này."
+  },
+  "connectedAccountsEmptyDescription": {
+    "message": "GTx chưa kết nối với trang web này. Để kết nối với một trang web trên web3, hãy tìm nút kết nối trên trang web của họ."
+  },
+  "connectedSites": {
+    "message": "Trang web đã kết nối"
+  },
+  "connectedSitesDescription": {
+    "message": "$1 đã kết nối với các trang web này. Các trang web này có thể xem địa chỉ tài khoản của bạn.",
+    "description": "$1 is the account name"
+  },
+  "connectedSitesEmptyDescription": {
+    "message": "$1 chưa kết nối với bất kỳ trang web nào.",
+    "description": "$1 is the account name"
+  },
+  "connecting": {
+    "message": "Đang kết nối..."
+  },
+  "connectingTo": {
+    "message": "Đang kết nối với $1"
+  },
+  "connectingToGoerli": {
+    "message": "Đang kết nối với mạng thử nghiệm Goerli"
+  },
+  "connectingToKovan": {
+    "message": "Đang kết nối với mạng thử nghiệm Kovan"
+  },
+  "connectingToMainnet": {
+    "message": "Đang kết nối với mạng chính thức của Ethereum"
+  },
+  "connectingToThetaMainnet": {
+    "message": "Đang kết nối với mạng chính thức của Theta"
+  },
+  "connectingToRinkeby": {
+    "message": "Đang kết nối với mạng thử nghiệm Rinkeby"
+  },
+  "connectingToRopsten": {
+    "message": "Đang kết nối với mạng thử nghiệm Ropsten"
+  },
+  "contactUs": {
+    "message": "Liên hệ với chúng tôi"
+  },
+  "contacts": {
+    "message": "Danh bạ"
+  },
+  "contactsSettingsDescription": {
+    "message": "Thêm, chỉnh sửa, xóa và quản lý danh bạ của bạn"
+  },
+  "continue": {
+    "message": "Tiếp tục"
+  },
+  "continueToWyre": {
+    "message": "Tiếp tục chuyển đến Wyre"
+  },
+  "contract": {
+    "message": "Hợp đồng"
+  },
+  "contractAddressError": {
+    "message": "Bạn đang gửi token đến địa chỉ hợp đồng của token. Điều này có thể khiến bạn bị mất những token này."
   },
   "contractDeployment": {
     "message": "Triển khai hợp đồng"
@@ -198,7 +342,7 @@
     "message": "Tài khoản của tôi"
   },
   "needEtherInWallet": {
-    "message": "Để tương tác với các ứng dụng phân tán bằng MetaMask, bạn sẽ phải cần có Ether trong ví của bạn."
+    "message": "Để tương tác với các ứng dụng phân tán bằng GTx, bạn sẽ phải cần có Ether trong ví của bạn."
   },
   "needImportFile": {
     "message": "Bạn phải chọn một tập tin để nhập.",

@@ -5,10 +5,6 @@
   "contractInteraction": {
     "message": "Līguma mijiedarbības"
   },
-  "appName": {
-    "message": "MetaMask",
-    "description": "The name of the application"
-  },
   "reject": {
     "message": "Noraidīt"
   },
@@ -76,14 +72,18 @@
     "message": "Pievienot ieteiktos marķierus"
   },
   "addAcquiredTokens": {
-    "message": "Pievienojiet marķierus, ko ieguvāt, izmantojot MetaMask"
+    "message": "Pievienojiet marķierus, ko ieguvāt, izmantojot GTx"
   },
   "amount": {
     "message": "Apjoms"
   },
   "appDescription": {
-    "message": "Ethereum maks pārlūkā",
+    "message": "Theta / GNOTE / Ethereum maks pārlūkā",
     "description": "The description of the application"
+  },
+  "appName": {
+    "message": "GTx Wallet",
+    "description": "The name of the application"
   },
   "approve": {
     "message": "Apstiprināt"
@@ -110,7 +110,7 @@
     "message": "Automātiskās izrakstīšanās taimeris (minūtes)"
   },
   "autoLockTimeLimitDescription": {
-    "message": "Iestatiet bezdarbības laiku minūtēs, pēc kura MetaMask veiks automātisku izrakstīšanu"
+    "message": "Iestatiet bezdarbības laiku minūtēs, pēc kura GTx veiks automātisku izrakstīšanu"
   },
   "average": {
     "message": "Vidēji"
@@ -125,7 +125,7 @@
     "message": "Dublējiet savu slepeno atgūšanas kodu, lai maks un līdzekļi atrastos drošībā."
   },
   "backupApprovalInfo": {
-    "message": "Šis slepenais kods ir nepieciešams, lai atjaunotu jūsu maku, ja pazaudējat ierīci, aizmirstat paroli, jāpārinstalē MetaMask vai vēlaties piekļūt makam no citas ierīces."
+    "message": "Šis slepenais kods ir nepieciešams, lai atjaunotu jūsu maku, ja pazaudējat ierīci, aizmirstat paroli, jāpārinstalē GTx vai vēlaties piekļūt makam no citas ierīces."
   },
   "backupNow": {
     "message": "Dublēt tagad"
@@ -151,15 +151,12 @@
   },
   "browserNotSupported": {
     "message": "Jūsu pārlūkprogramma netiek atbalstīta..."
-  },
-  "builtInCalifornia": {
-    "message": "MetaMask ir izstrādāta un izveidota Kalifornijā."
-  },
+  },  
   "buyWithWyre": {
     "message": "Pirkt ETH ar Wyre"
   },
   "buyWithWyreDescription": {
-    "message": "Wyre ļauj noguldīt ETH tieši jūsu MetaMask kontā, izmantojot kredītkarti."
+    "message": "Wyre ļauj noguldīt ETH tieši jūsu GTx kontā, izmantojot kredītkarti."
   },
   "buyCoinSwitch": {
     "message": "Pirkt CoinSwitch"
@@ -204,7 +201,7 @@
     "message": "Aizvērt"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "MetaMask ir jāpalaiž pārlūkprogrammā Google Chrome, lai varētu pievienot aparatūras maku."
+    "message": "GTx ir jāpalaiž pārlūkprogrammā Google Chrome, lai varētu pievienot aparatūras maku."
   },
   "confirm": {
     "message": "Apstiprināt"
@@ -238,6 +235,9 @@
   },
   "connectingToRopsten": {
     "message": "Pieslēdzas Ropsten testa tīklam"
+  },
+  "connectingToThetaMainnet": {
+    "message": "Savienojas ar galveno Theta tīklu"
   },
   "connectingToRinkeby": {
     "message": "Pieslēdzas Rinkeby testa tīklam"
@@ -372,16 +372,16 @@
     "message": "Nekad neizpaudiet šo frāzi citiem cilvēkiem."
   },
   "endOfFlowMessage5": {
-    "message": "Uzmanieties no pikšķerēšanas! MetaMask nekad pēkšņi nelūgs norādīt atkopšanas frāzi."
+    "message": "Uzmanieties no pikšķerēšanas! GTx nekad pēkšņi nelūgs norādīt atkopšanas frāzi."
   },
   "endOfFlowMessage6": {
     "message": "Ja nepieciešams atkārtoti dublēt atkopšanas frāzi, varat to atrast, dodoties uz Iestatījumi -> Drošība."
   },
   "endOfFlowMessage7": {
-    "message": "Ja jums rodas kādi jautājumi vai pamanāt ko aizdomīgu, rakstiet uz support@metamask.io."
+    "message": "Ja jums rodas kādi jautājumi vai pamanāt ko aizdomīgu, rakstiet uz support@gtx.io."
   },
   "endOfFlowMessage8": {
-    "message": "MetaMask nevar atjaunot jūsu atkopšanas frāzi. Uzzināt vairāk."
+    "message": "GTx nevar atjaunot jūsu atkopšanas frāzi. Uzzināt vairāk."
   },
   "endOfFlowMessage9": {
     "message": "Uzzināt vairāk."
@@ -497,7 +497,7 @@
     "message": "Pieslēdziet aparatūras maku"
   },
   "hardwareWalletsMsg": {
-    "message": "Atlasiet aparatūras maku lietošanai ar MetaMask"
+    "message": "Atlasiet aparatūras maku lietošanai ar GTx"
   },
   "havingTroubleConnecting": {
     "message": "Neizdodas pieslēgties?"
@@ -526,7 +526,7 @@
     "message": "Importēt kontu"
   },
   "importAccountMsg": {
-    "message": "Importētie konti netiks piesaistīti sākotnēji izveidotā MetaMask konta atkopšanas frāzei. Uzziniet vairāk par importētajiem kontiem"
+    "message": "Importētie konti netiks piesaistīti sākotnēji izveidotā GTx konta atkopšanas frāzei. Uzziniet vairāk par importētajiem kontiem"
   },
   "importAccountSeedPhrase": {
     "message": "Importēt kontu ar atkopšanas frāzi"
@@ -642,7 +642,7 @@
     "message": "Veido savienojumu ar Ethereum un decentralizēto tīmekli."
   },
   "metamaskVersion": {
-    "message": "MetaMask versija"
+    "message": "GTx versija"
   },
   "mobileSyncText": {
     "message": "Lūdzu, ievadiet paroli, lai apstiprinātu, ka tas esat jūs."
@@ -654,13 +654,13 @@
     "message": "Mana maka konti"
   },
   "myWalletAccountsDescription": {
-    "message": "Visi jūsu izveidotie MetaMask konti tiks automātiski pievienoti šajā sadaļā."
+    "message": "Visi jūsu izveidotie GTx konti tiks automātiski pievienoti šajā sadaļā."
   },
   "mustSelectOne": {
     "message": "Jāatlasa vismaz 1 marķieris."
   },
   "needEtherInWallet": {
-    "message": "Lai izmantotu decentralizētas lietotnes ar MetaMask, jūsu makā jābūt Ether."
+    "message": "Lai izmantotu decentralizētas lietotnes ar GTx, jūsu makā jābūt Ether."
   },
   "needImportFile": {
     "message": "Jums jāatlasa fails, ko importēt",
@@ -704,7 +704,7 @@
     "message": "Jauns tīkls"
   },
   "newToMetaMask": {
-    "message": "Nepazīstat MetaMask?"
+    "message": "Nepazīstat GTx?"
   },
   "noAlreadyHaveSeed": {
     "message": "Nē, man jau ir atkopšanas frāze"
@@ -713,10 +713,10 @@
     "message": "Sargājiet savas atslēgas!"
   },
   "protectYourKeysMessage1": {
-    "message": "Rīkojieties uzmanīgi ar sēklas frāzi — saņemti ziņojumi par tīmekļa vietnēm, kas mēģina imitēt MetaMask. MetaMask nekad nelūgs norādīt sēklas frāzi."
+    "message": "Rīkojieties uzmanīgi ar sēklas frāzi — saņemti ziņojumi par tīmekļa vietnēm, kas mēģina imitēt GTx. GTx nekad nelūgs norādīt sēklas frāzi."
   },
   "protectYourKeysMessage2": {
-    "message": "Glabājiet frāzi drošībā. Ja kaut kas šķiet aizdomīgs vai neesat pārliecināti par tīmekļa vietni, rakstiet e-pastu uz support@metamask.io"
+    "message": "Glabājiet frāzi drošībā. Ja kaut kas šķiet aizdomīgs vai neesat pārliecināti par tīmekļa vietni, rakstiet e-pastu uz support@gtx.io"
   },
   "rpcUrl": {
     "message": "Jauns RPC URL"
@@ -765,12 +765,6 @@
   },
   "parameters": {
     "message": "Parametri"
-  },
-  "participateInMetaMetrics": {
-    "message": "Piedalieties MetaMetrics"
-  },
-  "participateInMetaMetricsDescription": {
-    "message": "Piedalieties MetaMetrics un palīdziet mums to uzlabot"
   },
   "password": {
     "message": "Parole"
@@ -982,7 +976,7 @@
     "message": "Nosūtīt marķierus"
   },
   "sentEther": {
-    "message": "nosūtītie ether"
+    "message": "nosūtītie"
   },
   "sentTokens": {
     "message": "nosūtītie marķieri"
@@ -997,7 +991,7 @@
     "message": "Atlasiet kontu"
   },
   "selectAnAccountHelp": {
-    "message": "Atlasiet kontu, ko skatīt MetaMask"
+    "message": "Atlasiet kontu, ko skatīt GTx"
   },
   "selectAHigherGasFee": {
     "message": "Atlasiet lielāku maksu par Gas, lai paātrinātu darījuma apstrādi.*"
@@ -1111,19 +1105,19 @@
     "message": "Sinhronizēt ar tālruni"
   },
   "syncWithMobileDesc": {
-    "message": "Jūs varat sinhronizēt savus kontus un informāciju ar mobilo ierīci. Atveriet MetaMask mobilo lietotni, ejiet uz \"Iestatījumi\" un pieskarieties pie \"Sinhronizēt no pārlūka paplašinājuma\""
+    "message": "Jūs varat sinhronizēt savus kontus un informāciju ar mobilo ierīci. Atveriet GTx mobilo lietotni, ejiet uz \"Iestatījumi\" un pieskarieties pie \"Sinhronizēt no pārlūka paplašinājuma\""
   },
   "syncWithMobileDescNewUsers": {
-    "message": "Ja esat pirmoreiz atvēris MetaMask mobilo lietotni, vienkārši sekojiet norādēm tālrunī."
+    "message": "Ja esat pirmoreiz atvēris GTx mobilo lietotni, vienkārši sekojiet norādēm tālrunī."
   },
   "syncWithMobileScanThisCode": {
-    "message": "Noskenējiet šo kodu ar MetaMask mobilo lietotni"
+    "message": "Noskenējiet šo kodu ar GTx mobilo lietotni"
   },
   "syncWithMobileBeCareful": {
     "message": "Pārliecinieties, ka neviens cits neskatās jūsu ekrānā, kad skenējat šo kodu."
   },
   "syncWithMobileComplete": {
-    "message": "Jūsu dati sekmīgi sinhronizēti. Patīkamu MetaMask mobilās lietotnes lietošanu!"
+    "message": "Jūsu dati sekmīgi sinhronizēti. Patīkamu GTx mobilās lietotnes lietošanu!"
   },
   "terms": {
     "message": "Lietošanas noteikumi"
@@ -1206,6 +1200,9 @@
   "transferFrom": {
     "message": "Nosūtīt no"
   },
+  "transferfrom": {
+    "message": "Nosūtīt no"
+  },
   "troubleTokenBalances": {
     "message": "Mums neizdevās ielādēt marķieru bilanci. Varat tos skatīt",
     "description": "Followed by a link (here) to view token balances"
@@ -1214,7 +1211,7 @@
     "message": "Mēģināt vēlreiz"
   },
   "typePassword": {
-    "message": "Ievadiet savu MetaMask paroli"
+    "message": "Ievadiet savu GTx paroli"
   },
   "unapproved": {
     "message": "Nav apstiprināts"
@@ -1258,7 +1255,7 @@
   "viewAccount": {
     "message": "Skatīt kontu"
   },
-  "viewinExplorer": {
+  "viewInExplorer": {
     "message": "Skatīt Explorer"
   },
   "viewContact": {
@@ -1280,7 +1277,7 @@
     "message": "Ar atgriešanos!"
   },
   "welcome": {
-    "message": "Laipni lūgti MetaMask"
+    "message": "Laipni lūgti GTx"
   },
   "writePhrase": {
     "message": "Pierakstiet šo frāzi uz lapiņas, un noglabājiet to drošā vietā! Ja vēlaties stiprināt drošību, pierakstiet to uz vairākām lapiņām un glabājiet tās 2–3 dažādās vietās."

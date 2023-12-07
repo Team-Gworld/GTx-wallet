@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="14.941956mm"
+   height="14.978487mm"
+   viewBox="0 0 14.941955 14.978487"
+   version="1.1"
+   id="svg3767"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="theta-wrapped.svg">
+  <defs
+     id="defs3761" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="11.2"
+     inkscape:cx="26.616542"
+     inkscape:cy="12.37933"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1684"
+     inkscape:window-height="1376"
+     inkscape:window-x="1756"
+     inkscape:window-y="27"
+     inkscape:window-maximized="0"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata3764">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="opacity:1"
+     transform="translate(-98.363504,-141.34364)">
+    <g
+       id="g3804"
+       transform="matrix(0.26458333,0,0,0.26458333,98.001667,141.00167)">
+      <linearGradient
+         y2="56.039299"
+         x2="51.939301"
+         y1="20.5921"
+         x1="21.9984"
+         gradientUnits="userSpaceOnUse"
+         id="SVGID_1_">
+        <stop
+           id="stop3771"
+           style="stop-color:#5AC3B6"
+           offset="0" />
+        <stop
+           id="stop3773"
+           style="stop-color:#35B9E7"
+           offset="1" />
+      </linearGradient>
+      <circle
+         id="circle3776"
+         r="28.299999"
+         cy="29.6"
+         cx="29.6"
+         class="st0"
+         style="fill:url(#SVGID_1_)" />
+      <linearGradient
+         y2="16.8137"
+         x2="18.323299"
+         y1="32.4151"
+         x1="32.089298"
+         gradientUnits="userSpaceOnUse"
+         id="SVGID_2_">
+        <stop
+           id="stop3778"
+           style="stop-color:#5AC3B6"
+           offset="0" />
+        <stop
+           id="stop3780"
+           style="stop-color:#35B9E7"
+           offset="1" />
+      </linearGradient>
+      <circle
+         id="circle3783"
+         r="22.299999"
+         cy="29.6"
+         cx="29.6"
+         class="st1"
+         style="fill:url(#SVGID_2_)" />
+      <linearGradient
+         y2="44.123699"
+         x2="43.660301"
+         y1="15.4447"
+         x1="15.899"
+         gradientUnits="userSpaceOnUse"
+         id="SVGID_3_">
+        <stop
+           id="stop3785"
+           style="stop-color:#5AC3B6"
+           offset="0" />
+        <stop
+           id="stop3787"
+           style="stop-color:#35B9E7"
+           offset="1" />
+      </linearGradient>
+      <circle
+         id="circle3790"
+         r="19.799999"
+         cy="29.6"
+         cx="29.6"
+         class="st2"
+         style="fill:url(#SVGID_3_)" />
+      <g
+         id="g3796">
+        <polygon
+           id="polygon3792"
+           points="20.9,26.9 36.6,26.9 36.6,21.8 31.3,21.8 31.3,16.4 26.2,16.4 26.2,21.8 20.9,21.8 "
+           class="st3"
+           style="fill:#2dace3" />
+        <polygon
+           id="polygon3794"
+           points="36.6,30.7 20.9,30.7 20.9,35.8 26.2,35.8 26.2,41.2 31.3,41.2 31.3,35.8 36.6,35.8 "
+           class="st3"
+           style="fill:#2dace3" />
+      </g>
+      <g
+         id="g3802">
+        <polygon
+           id="polygon3798"
+           points="21.8,27.8 37.5,27.8 37.5,22.6 32.2,22.6 32.2,17.3 27.1,17.3 27.1,22.6 21.8,22.6 "
+           class="st4"
+           style="fill:#ffffff" />
+        <polygon
+           id="polygon3800"
+           points="37.5,31.5 21.8,31.5 21.8,36.7 27.1,36.7 27.1,42 32.2,42 32.2,36.7 37.5,36.7 "
+           class="st4"
+           style="fill:#ffffff" />
+      </g>
+    </g>
+    <ellipse
+       style="fill:none;stroke:#000000;stroke-width:0.74202067;stroke-miterlimit:4;stroke-dasharray:0.74202064, 0.74202064;stroke-dashoffset:2.44124794;stroke-opacity:0.78095242"
+       id="path878"
+       cx="105.83671"
+       cy="148.83286"
+       rx="7.1094069"
+       ry="7.1181502" />
+  </g>
+  <style
+     id="style3769"
+     type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_2_);}
+	.st2{fill:url(#SVGID_3_);}
+	.st3{fill:#2DACE3;}
+	.st4{fill:#FFFFFF;}
+</style>
+</svg>
