@@ -9,7 +9,10 @@ export default class MultipleNotifications extends PureComponent {
   };
 
   static propTypes = {
-    children: PropTypes.array,
+    children: PropTypes.oneOfType([
+      PropTypes.array,
+      PropTypes.object
+    ]),
     classNames: PropTypes.array,
   };
 
@@ -21,7 +24,7 @@ export default class MultipleNotifications extends PureComponent {
     const { showAll } = this.state;
     const { children, classNames } = this.props;
 
-    const childrenToRender = children?.filter((child) => child) || [];
+    const childrenToRender = React.Children.toArray(children || []).filter((child) => child);
     if (childrenToRender.length === 0) {
       return null;
     }
